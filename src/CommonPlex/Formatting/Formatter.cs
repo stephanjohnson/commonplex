@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Microsoft.Framework.WebEncoders;
 using CommonPlex.Common;
 using CommonPlex.Formatting.Renderers;
 using CommonPlex.Parsing;
@@ -118,7 +117,7 @@ namespace CommonPlex.Formatting
         {
             Guard.NotNull(input, "input");
 
-            return HtmlEncoder.Default.HtmlEncode(input);
+            return input;
         }
 
         /// <summary>
@@ -131,7 +130,7 @@ namespace CommonPlex.Formatting
         {
             Guard.NotNull(input, "input");
 
-            return HtmlEncoder.Default.HtmlEncode(input);
+            return input;
         }
 
         /// <summary>

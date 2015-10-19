@@ -10,10 +10,8 @@
   "licenseUrl": "https://github.com/stephanjohnson/commonplex/blob/master/LICENSE",
 
   "dependencies": {
-    "System.Text.RegularExpressions": "4.0.11-beta-23409",
-    "Microsoft.AspNet.Mvc": "6.0.0-beta8",
-    "Microsoft.AspNet.Mvc.Core": "6.0.0-beta8",
-    "Microsoft.Framework.WebEncoders.Core": "1.0.0-beta8"
+    "System.Linq": "4.0.1-beta-23409",
+    "System.Text.RegularExpressions": "4.0.11-beta-23409"
   },
 
   "frameworks": {
