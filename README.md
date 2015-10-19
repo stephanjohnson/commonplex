@@ -9,5 +9,9 @@ Using this engine is very simple:
 ```
 new CommonPlex.RenderEngine().Render("this is **bold** and *italic* rendered HTML from markdown");
 ```
+
 ## Extensibility
 more on this topic later.
+
+## Tests
+I have copied the tests from WikiPlex, and converted them to DNXCORE50. However, some components such as Moq and Should are not available as DNXCORE50 packages just yet. Once they are available, I will complete the implementation of the testing and performance harnasses.
