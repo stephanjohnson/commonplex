@@ -37,7 +37,7 @@ namespace CommonPlex.Compilation.Macros
                                            {2, ScopeName.ItalicsEnd}
                                        }),
                                new MacroRule(
-                                   @"(?-s)(?:(*)(?>[^{\[*\n]*)(?>(?:{{?|\[)(?>[^}\]\n]*)(?>(?:}}?|\])*)|.)*?(?>[^{\[*\n]*)(*))",
+                                   @"(?-s)(?:(\*)(?>[^{\[\*\n]*)(?>(?:{{?|\[)(?>[^}\]\n]*)(?>(?:}}?|\])*)|.)*?(?>[^{\[\*\n]*)(\*))",
                                    new Dictionary<int, string>
                                        {
                                            {1, ScopeName.ItalicsBegin},

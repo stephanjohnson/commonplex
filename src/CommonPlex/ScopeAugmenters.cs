@@ -7,7 +7,7 @@ using CommonPlex.Parsing;
 namespace CommonPlex
 {
     /// <summary>
-    /// The static entry point for registering <see cref="IScopeAugmenter" />s for all instances of a <see cref="IWikiEngine"/>.
+    /// The static entry point for registering <see cref="IScopeAugmenter" />s for all instances of a <see cref="IRenderEngine"/>.
     /// </summary>
     /// <remarks>For convienience, all <see cref="IScopeAugmenter"/>s that are shipped with CommonPlex are already registered.</remarks>
     public static class ScopeAugmenters

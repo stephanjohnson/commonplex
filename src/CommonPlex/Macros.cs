@@ -6,7 +6,7 @@ using CommonPlex.Compilation.Macros;
 namespace CommonPlex
 {
     /// <summary>
-    /// The static entry point for registering <see cref="IMacro" />s for all instances of a <see cref="IWikiEngine" />.
+    /// The static entry point for registering <see cref="IMacro" />s for all instances of a <see cref="IRenderEngine" />.
     /// </summary>
     /// <remarks>For convienience, all <see cref="IMacro"/>s that are shipped with CommonPlex are already registered.</remarks>
     public static class Macros
@@ -20,10 +20,10 @@ namespace CommonPlex
             macroLock = new ReaderWriterLockSlim();
 
             // load the default macros
+            Register<HorizontalLineMacro>();
             Register<BoldMacro>();
             Register<ItalicsMacro>();
             Register<HeadingsMacro>();
-            Register<HorizontalLineMacro>();
             Register<LinkMacro>();
             Register<ImageMacro>();
             Register<ListMacro>();

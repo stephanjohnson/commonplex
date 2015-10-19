@@ -30,14 +30,14 @@ namespace CommonPlex.Compilation.Macros
                            {
                                new MacroRule(EscapeRegexPatterns.FullEscape),
                                new MacroRule(
-                                   @"(?-s)(?:((?!\**+\s)\**)(?>[^{[\**\n]**)(?>(?:{{?|\[)(?>[^}\]\n]**)(?>(?:}}?|\])**)|.)**?(?>[^{[\**\n]**(\**)))",
+                                   @"(?-s)(?:((?!\*\*+\s)\*\*)(?>[^{[\*\*\n]*)(?>(?:{{?|\[)(?>[^}\]\n]*)(?>(?:}}?|\])*)|.)*?(?>[^{[\*\*\n]*(\*\*)))",
                                    new Dictionary<int, string>
                                        {
                                            {1, ScopeName.BoldBegin},
                                            {2, ScopeName.BoldEnd}
                                        }),
                                new MacroRule(
-                                   @"(?-s)(?:((?!\__+\s)\__)(?>[^{[\__\n]__)(?>(?:{{?|\[)(?>[^}\]\n]__)(?>(?:}}?|\])__)|.)__?(?>[^{[\__\n]__(\__)))",
+                                   @"(?-s)(?:((?!__+\s)__)(?>[^{[__\n]*)(?>(?:{{?|\[)(?>[^}\]\n]*)(?>(?:}}?|\])*)|.)*?(?>[^{[__\n]*(__)))",
                                    new Dictionary<int, string>
                                        {
                                            {1, ScopeName.BoldBegin},

@@ -7,7 +7,7 @@ using CommonPlex.Formatting.Renderers;
 namespace CommonPlex
 {
     /// <summary>
-    /// The static entry point for registering <see cref="IRenderer" />s for all instances of a <see cref="IWikiEngine" />.
+    /// The static entry point for registering <see cref="IRenderer" />s for all instances of a <see cref="IRenderEngine" />.
     /// </summary>
     /// <remarks>For convienience, all <see cref="IRenderer"/>s that are shipped with CommonPlex are already registered.</remarks>
     public class Renderers

@@ -6,9 +6,9 @@ using CommonPlex.Formatting.Renderers;
 namespace CommonPlex
 {
     /// <summary>
-    /// Defines the <see cref="WikiEngine" /> contract.
+    /// Defines the <see cref="RenderEngine" /> contract.
     /// </summary>
-    public interface IWikiEngine
+    public interface IRenderEngine
     {
         /// <summary>
         /// Renders the wiki content using the statically registered macros and renderers.

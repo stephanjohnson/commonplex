@@ -29,9 +29,9 @@ namespace CommonPlex.Compilation.Macros
             {
                 return new List<MacroRule>
                            {
-                               new MacroRule(@"^(---)", ScopeName.HorizontalRule),
-                               new MacroRule(@"^(***)", ScopeName.HorizontalRule),
-                               new MacroRule(@"^(___)", ScopeName.HorizontalRule)
+                               new MacroRule(@"^[\s]{0,3}(\*{1,3}[\*\s]+)(\r?\n|$)", ScopeName.HorizontalRule),
+                               new MacroRule(@"^[\s]{0,3}(-{1,3}[-\s]+)(\r?\n|$)", ScopeName.HorizontalRule),
+                               new MacroRule(@"^[\s]{0,3}(_{1,3}[_\s]+)(\r?\n|$)", ScopeName.HorizontalRule)
                            };
             }
         }

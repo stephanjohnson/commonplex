@@ -33,7 +33,7 @@ namespace CommonPlex.Compilation.Macros
                            {
                                new MacroRule(EscapeRegexPatterns.FullEscape),
                                new MacroRule(
-                                   @"(?im)(^(?:\*+|\#+)\s)[^\r\n]+((?:\r\n)?)$",
+                                   @"(?im)(^(?:\*|\-)\s)[^\r\n]+((?:\r\n)?)$",
                                    new Dictionary<int, string>
                                        {
                                            {1, ScopeName.ListItemBegin},

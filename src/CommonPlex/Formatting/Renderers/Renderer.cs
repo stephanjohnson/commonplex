@@ -75,7 +75,7 @@ namespace CommonPlex.Formatting.Renderers
         public string Expand(string scopeName, string input, Func<string, string> htmlEncode, Func<string, string> attributeEncode)
         {
             if (!CanExpand(scopeName))
-                throw new ArgumentException("Invalid scope name for this renderer.", "scopeName");
+                throw new ArgumentException("Invalid scope name for this renderer.", nameof(scopeName));
 
             try
             {

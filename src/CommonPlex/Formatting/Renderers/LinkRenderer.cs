@@ -18,8 +18,8 @@ namespace CommonPlex.Formatting.Renderers
         {
             get
             {
-                return new[] { 
-                                ScopeName.LinkNoText, ScopeName.LinkWithText, 
+                return new[] {
+                                ScopeName.LinkNoText, ScopeName.LinkWithText,
                                 ScopeName.LinkAsMailto,
                                 ScopeName.LinkToAnchor
                              };
@@ -46,16 +46,14 @@ namespace CommonPlex.Formatting.Renderers
         {
             input = input.Trim();
 
-            
-                if (scopeName == ScopeName.LinkNoText)
-                    return ExpandLinkNoText(input, attributeEncode, htmlEncode);
-                if (scopeName == ScopeName.LinkWithText)
-                    return ExpandLinkWithText(input, attributeEncode, htmlEncode);
-                if (scopeName == ScopeName.LinkAsMailto)
-                    return string.Format(LinkFormat, attributeEncode("mailto:" + input), htmlEncode(input));
-                if (scopeName == ScopeName.LinkToAnchor)
-                    return string.Format(LinkFormat, attributeEncode("#" + input), htmlEncode(input));
-            
+            if (scopeName == ScopeName.LinkNoText)
+                return ExpandLinkNoText(input, attributeEncode, htmlEncode);
+            if (scopeName == ScopeName.LinkWithText)
+                return ExpandLinkWithText(input, attributeEncode, htmlEncode);
+            if (scopeName == ScopeName.LinkAsMailto)
+                return string.Format(LinkFormat, attributeEncode("mailto:" + input), htmlEncode(input));
+            if (scopeName == ScopeName.LinkToAnchor)
+                return string.Format(LinkFormat, attributeEncode("#" + input), htmlEncode(input));
 
             return null;
         }

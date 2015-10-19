@@ -1,16 +1,19 @@
 {
-  "version": "1.0.0-*",
-  "description": "CommonPlex Class Library",
+  "version": "0.1.15",
+  "title": "CommonPlex",
+  "description": "CommonPlex provides extensible markdown rendering based on the WikiPlex rendering engine.",
+  "summary": "Render markdown into HTML",
   "authors": [ "Stephan Johnson" ],
   "tags": [ "CommonMark" ],
+  "owners": [ "stephanjohnson" ],
   "projectUrl": "http://www.github.com/stephanjohnson/commonplex",
   "licenseUrl": "https://github.com/stephanjohnson/commonplex/blob/master/LICENSE",
 
   "dependencies": {
-    "System.Text.RegularExpressions": "4.0.11-beta-23225",
-    "Microsoft.AspNet.Mvc": "6.0.0-beta7",
-    "Microsoft.AspNet.Mvc.Core": "6.0.0-beta7",
-    "Microsoft.Framework.WebEncoders.Core": "1.0.0-beta7"
+    "System.Text.RegularExpressions": "4.0.11-beta-23409",
+    "Microsoft.AspNet.Mvc": "6.0.0-beta8",
+    "Microsoft.AspNet.Mvc.Core": "6.0.0-beta8",
+    "Microsoft.Framework.WebEncoders.Core": "1.0.0-beta8"
   },
 
   "frameworks": {

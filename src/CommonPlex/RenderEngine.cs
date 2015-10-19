@@ -13,7 +13,7 @@ namespace CommonPlex
     /// <summary>
     /// The public entry point for the wiki engine.
     /// </summary>
-    public class WikiEngine : IWikiEngine
+    public class RenderEngine : IRenderEngine
     {
         private static readonly MacroCompiler Compiler = new MacroCompiler();
         private static readonly Regex NewLineRegex = new Regex(@"(?<!\r|</tr>|</li>|</ul>|</ol>|<hr />|</blockquote>)(?:\n|&#10;)(?!<h[1-6]>|<hr />|<ul>|<ol>|</li>|</blockquote>)");
@@ -22,16 +22,17 @@ namespace CommonPlex
         private readonly Parser parser;
 
         /// <summary>
-        /// Instantiates a new instance of the <see cref="WikiEngine"/>.
+        /// Instantiates a new instance of the <see cref="RenderEngine"/>.
         /// </summary>
-        public WikiEngine() : this(new Parser(Compiler))
-        {}
+        public RenderEngine() : this(new Parser(Compiler))
+        {
+        }
 
         /// <summary>
-        /// Instantiates a new instance of the <see cref="WikiEngine"/>.
+        /// Instantiates a new instance of the <see cref="RenderEngine"/>.
         /// </summary>
         /// <param name="parser">The macro parser to use.</param>
-        protected internal WikiEngine(Parser parser)
+        protected internal RenderEngine(Parser parser)
         {
             this.parser = parser;
         }
