@@ -1,15 +1,22 @@
-﻿using Xunit;
+
+using Xunit;
 
 namespace CommonPlex.CommonMark.Tests
 {
-    public class Precedence : BaseTest
+    public class Precedence: BaseTest
     {
-        #region Example 07
-
+        
+        #region Example 007
         [Fact]
-        public void Example07()
+        public void Example007()
         {
-            Assert.Equal("<ul><li>`one</li><li>two`</li></ul>", GetHtml("- `one\r\n- two`"));
+            Assert.Equal(@"<ul>
+<li>`one</li>
+<li>two`</li>
+</ul>
+", GetHtml(@"- `one
+- two`
+"));
         }
 
         #endregion

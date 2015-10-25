@@ -1,231 +1,266 @@
-﻿using Xunit;
+
+using Xunit;
 
 namespace CommonPlex.CommonMark.Tests
 {
-    public class HorizontalRules: BaseTest
+    public class Horizontalrules: BaseTest
     {
-        #region Example 08
-
+        
+        #region Example 008
         [Fact]
-        public void Example08_1()
+        public void Example008()
         {
-            Assert.Equal("<hr />", GetHtml("***"));
-        }
-
-        [Fact]
-        public void Example08_2()
-        {
-            Assert.Equal("<hr />", GetHtml("---"));
-        }
-
-        [Fact]
-        public void Example08_3()
-        {
-            Assert.Equal("<hr />", GetHtml("___"));
+            Assert.Equal(@"<hr />
+<hr />
+<hr />
+", GetHtml(@"***
+---
+___
+"));
         }
 
         #endregion
 
-        #region Example 09
-
+        #region Example 009
         [Fact]
-        public void Example09()
+        public void Example009()
         {
-            Assert.Equal("<p>+++</p>", GetHtml("+++"));
+            Assert.Equal(@"<p>+++</p>
+", GetHtml(@"+++
+"));
         }
 
         #endregion
 
-        #region Example 10
-
+        #region Example 010
         [Fact]
-        public void Example10()
+        public void Example010()
         {
-            Assert.Equal("<p>===</p>", GetHtml("==="));
+            Assert.Equal(@"<p>===</p>
+", GetHtml(@"===
+"));
         }
 
         #endregion
 
-        #region Example 11
-
+        #region Example 011
         [Fact]
-        public void Example11()
+        public void Example011()
         {
-            Assert.Equal("<p>--**__</p>", GetHtml("--\r\n**\r\n__"));
+            Assert.Equal(@"<p>--
+**
+__</p>
+", GetHtml(@"--
+**
+__
+"));
         }
 
         #endregion
 
-        #region Example 12
-
+        #region Example 012
         [Fact]
-        public void Example12_1()
+        public void Example012()
         {
-            Assert.Equal("<hr />", GetHtml(" ***"));
-        }
-
-        [Fact]
-        public void Example12_2()
-        {
-            Assert.Equal("<hr />", GetHtml("  ***"));
-        }
-
-        [Fact]
-        public void Example12_3()
-        {
-            Assert.Equal("<hr />", GetHtml("   ***"));
+            Assert.Equal(@"<hr />
+<hr />
+<hr />
+", GetHtml(@" ***
+  ***
+   ***
+"));
         }
 
         #endregion
 
-        #region Example 13
-
+        #region Example 013
         [Fact]
-        public void Example13()
+        public void Example013()
         {
-            Assert.Equal("<pre><code>***</code></pre>", GetHtml("    ***"));
+            Assert.Equal(@"<pre><code>***
+</code></pre>
+", GetHtml(@"    ***
+"));
         }
 
         #endregion
 
-        #region Example 14
-
+        #region Example 014
         [Fact]
-        public void Example14()
+        public void Example014()
         {
-            Assert.Equal("<p>Foo***</p>", GetHtml("Foo\r\n    ***"));
+            Assert.Equal(@"<p>Foo
+***</p>
+", GetHtml(@"Foo
+    ***
+"));
         }
 
         #endregion
 
-        #region Example 15
-
+        #region Example 015
         [Fact]
-        public void Example15()
+        public void Example015()
         {
-            Assert.Equal("<hr />", GetHtml("_____________________________________"));
+            Assert.Equal(@"<hr />
+", GetHtml(@"_____________________________________
+"));
         }
 
         #endregion
 
-        #region Example 16
-
+        #region Example 016
         [Fact]
-        public void Example16()
+        public void Example016()
         {
-            Assert.Equal("<hr />", GetHtml(" - - -"));
+            Assert.Equal(@"<hr />
+", GetHtml(@" - - -
+"));
         }
 
         #endregion
 
-        #region Example 17
-
+        #region Example 017
         [Fact]
-        public void Example17()
+        public void Example017()
         {
-            Assert.Equal("<hr />", GetHtml(" **  * ** * ** * **"));
+            Assert.Equal(@"<hr />
+", GetHtml(@" **  * ** * ** * **
+"));
         }
 
         #endregion
 
-        #region Example 18
-
+        #region Example 018
         [Fact]
-        public void Example18()
+        public void Example018()
         {
-            Assert.Equal("<hr />", GetHtml("-     -      -      -"));
+            Assert.Equal(@"<hr />
+", GetHtml(@"-     -      -      -
+"));
         }
 
         #endregion
 
-        #region Example 19
-
+        #region Example 019
         [Fact]
-        public void Example19()
+        public void Example019()
         {
-            Assert.Equal("<hr />", GetHtml("- - - -    "));
+            Assert.Equal(@"<hr />
+", GetHtml(@"- - - -    
+"));
         }
 
         #endregion
 
-        #region Example 20
-
+        #region Example 020
         [Fact]
-        public void Example20_1()
+        public void Example020()
         {
-            Assert.Equal("<p>_ _ _ _ a</p>", GetHtml("_ _ _ _ a"));
-        }
+            Assert.Equal(@"<p>_ _ _ _ a</p>
+<p>a------</p>
+<p>---a---</p>
+", GetHtml(@"_ _ _ _ a
 
-        [Fact]
-        public void Example20_2()
-        {
-            Assert.Equal("<p>a------</p>", GetHtml("a------"));
-        }
+a------
 
-        [Fact]
-        public void Example20_3()
-        {
-            Assert.Equal("<p>---a---</p>", GetHtml("---a---"));
+---a---
+"));
         }
 
         #endregion
 
-        #region Example 21
-
+        #region Example 021
         [Fact]
-        public void Example21()
+        public void Example021()
         {
-            Assert.Equal("<p><em>-</em></p>", GetHtml(" *-*"));
+            Assert.Equal(@"<p><em>-</em></p>
+", GetHtml(@" *-*
+"));
         }
 
         #endregion
 
-        #region Example 22
-
+        #region Example 022
         [Fact]
-        public void Example22()
+        public void Example022()
         {
-            Assert.Equal("<ul><li>foo</li></ul><hr /><ul><li>bar</li></ul>", GetHtml("- foo\r\n***\r\n- bar"));
+            Assert.Equal(@"<ul>
+<li>foo</li>
+</ul>
+<hr />
+<ul>
+<li>bar</li>
+</ul>
+", GetHtml(@"- foo
+***
+- bar
+"));
         }
 
         #endregion
 
-        #region Example 23
-
+        #region Example 023
         [Fact]
-        public void Example23()
+        public void Example023()
         {
-            Assert.Equal("<p>Foo</p><hr /><p>bar</p>", GetHtml("Foo\r\n***\r\nbar"));
+            Assert.Equal(@"<p>Foo</p>
+<hr />
+<p>bar</p>
+", GetHtml(@"Foo
+***
+bar
+"));
         }
 
         #endregion
 
-        #region Example 24
-
+        #region Example 024
         [Fact]
-        public void Example24()
+        public void Example024()
         {
-            Assert.Equal("<h2>Foo</h2><p>bar</p>", GetHtml("Foo\r\n---\r\nbar"));
+            Assert.Equal(@"<h2>Foo</h2>
+<p>bar</p>
+", GetHtml(@"Foo
+---
+bar
+"));
         }
 
         #endregion
 
-        #region Example 25
-
+        #region Example 025
         [Fact]
-        public void Example25()
+        public void Example025()
         {
-            Assert.Equal("<ul><li>Foo</li></ul><hr /><ul><li>Bar</li></ul>", GetHtml("* Foo\r\n* * *\r\n* Bar"));
+            Assert.Equal(@"<ul>
+<li>Foo</li>
+</ul>
+<hr />
+<ul>
+<li>Bar</li>
+</ul>
+", GetHtml(@"* Foo
+* * *
+* Bar
+"));
         }
 
         #endregion
 
-        #region Example 26
-
+        #region Example 026
         [Fact]
-        public void Example26()
+        public void Example026()
         {
-            Assert.Equal("<ul><li>Foo</li><li><hr /></li></ul>", GetHtml("- Foo\r\n- * * *"));
+            Assert.Equal(@"<ul>
+<li>Foo</li>
+<li>
+<hr />
+</li>
+</ul>
+", GetHtml(@"- Foo
+- * * *
+"));
         }
 
         #endregion
