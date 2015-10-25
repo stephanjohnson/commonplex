@@ -16,11 +16,9 @@ namespace CommonPlex.CommonMark.Tests
 </ul>
 <ul>
 <li>baz</li>
-</ul>
-", GetHtml(@"- foo
+</ul>", GetHtml(@"- foo
 - bar
-+ baz
-"));
++ baz"));
         }
 
         #endregion
@@ -35,11 +33,9 @@ namespace CommonPlex.CommonMark.Tests
 </ol>
 <ol start=""3"">
 <li>baz</li>
-</ol>
-", GetHtml(@"1. foo
+</ol>", GetHtml(@"1. foo
 2. bar
-3) baz
-"));
+3) baz"));
         }
 
         #endregion
@@ -52,11 +48,9 @@ namespace CommonPlex.CommonMark.Tests
 <ul>
 <li>bar</li>
 <li>baz</li>
-</ul>
-", GetHtml(@"Foo
+</ul>", GetHtml(@"Foo
 - bar
-- baz
-"));
+- baz"));
         }
 
         #endregion
@@ -68,10 +62,8 @@ namespace CommonPlex.CommonMark.Tests
             Assert.Equal(@"<p>The number of windows in my house is</p>
 <ol start=""14"">
 <li>The number of doors is 6.</li>
-</ol>
-", GetHtml(@"The number of windows in my house is
-14.  The number of doors is 6.
-"));
+</ol>", GetHtml(@"The number of windows in my house is
+14.  The number of doors is 6."));
         }
 
         #endregion
@@ -90,14 +82,12 @@ namespace CommonPlex.CommonMark.Tests
 </ul>
 <ul>
 <li>baz</li>
-</ul>
-", GetHtml(@"- foo
+</ul>", GetHtml(@"- foo
 
 - bar
 
 
-- baz
-"));
+- baz"));
         }
 
         #endregion
@@ -112,13 +102,11 @@ namespace CommonPlex.CommonMark.Tests
 <p>bar</p>
 <ul>
 <li>baz</li>
-</ul>
-", GetHtml(@"- foo
+</ul>", GetHtml(@"- foo
 
 
   bar
-- baz
-"));
+- baz"));
         }
 
         #endregion
@@ -139,14 +127,12 @@ namespace CommonPlex.CommonMark.Tests
 </li>
 </ul>
 <pre><code>  bim
-</code></pre>
-", GetHtml(@"- foo
+</code></pre>", GetHtml(@"- foo
   - bar
     - baz
 
 
-      bim
-"));
+      bim"));
         }
 
         #endregion
@@ -162,14 +148,12 @@ namespace CommonPlex.CommonMark.Tests
 <ul>
 <li>baz</li>
 <li>bim</li>
-</ul>
-", GetHtml(@"- foo
+</ul>", GetHtml(@"- foo
 - bar
 
 
 - baz
-- bim
-"));
+- bim"));
         }
 
         #endregion
@@ -188,16 +172,14 @@ namespace CommonPlex.CommonMark.Tests
 </li>
 </ul>
 <pre><code>code
-</code></pre>
-", GetHtml(@"-   foo
+</code></pre>", GetHtml(@"-   foo
 
     notcode
 
 -   foo
 
 
-    code
-"));
+    code"));
         }
 
         #endregion
@@ -216,8 +198,7 @@ namespace CommonPlex.CommonMark.Tests
 <li>g</li>
 <li>h</li>
 <li>i</li>
-</ul>
-", GetHtml(@"- a
+</ul>", GetHtml(@"- a
  - b
   - c
    - d
@@ -225,8 +206,7 @@ namespace CommonPlex.CommonMark.Tests
    - f
   - g
  - h
-- i
-"));
+- i"));
         }
 
         #endregion
@@ -245,13 +225,11 @@ namespace CommonPlex.CommonMark.Tests
 <li>
 <p>c</p>
 </li>
-</ol>
-", GetHtml(@"1. a
+</ol>", GetHtml(@"1. a
 
   2. b
 
-    3. c
-"));
+    3. c"));
         }
 
         #endregion
@@ -270,12 +248,10 @@ namespace CommonPlex.CommonMark.Tests
 <li>
 <p>c</p>
 </li>
-</ul>
-", GetHtml(@"- a
+</ul>", GetHtml(@"- a
 - b
 
-- c
-"));
+- c"));
         }
 
         #endregion
@@ -292,12 +268,10 @@ namespace CommonPlex.CommonMark.Tests
 <li>
 <p>c</p>
 </li>
-</ul>
-", GetHtml(@"* a
+</ul>", GetHtml(@"* a
 *
 
-* c
-"));
+* c"));
         }
 
         #endregion
@@ -317,13 +291,11 @@ namespace CommonPlex.CommonMark.Tests
 <li>
 <p>d</p>
 </li>
-</ul>
-", GetHtml(@"- a
+</ul>", GetHtml(@"- a
 - b
 
   c
-- d
-"));
+- d"));
         }
 
         #endregion
@@ -342,13 +314,11 @@ namespace CommonPlex.CommonMark.Tests
 <li>
 <p>d</p>
 </li>
-</ul>
-", GetHtml(@"- a
+</ul>", GetHtml(@"- a
 - b
 
   [ref]: /url
-- d
-"));
+- d"));
         }
 
         #endregion
@@ -366,15 +336,13 @@ namespace CommonPlex.CommonMark.Tests
 </code></pre>
 </li>
 <li>c</li>
-</ul>
-", GetHtml(@"- a
+</ul>", GetHtml(@"- a
 - ```
   b
 
 
   ```
-- c
-"));
+- c"));
         }
 
         #endregion
@@ -393,13 +361,11 @@ namespace CommonPlex.CommonMark.Tests
 </ul>
 </li>
 <li>d</li>
-</ul>
-", GetHtml(@"- a
+</ul>", GetHtml(@"- a
   - b
 
     c
-- d
-"));
+- d"));
         }
 
         #endregion
@@ -415,12 +381,10 @@ namespace CommonPlex.CommonMark.Tests
 </blockquote>
 </li>
 <li>c</li>
-</ul>
-", GetHtml(@"* a
+</ul>", GetHtml(@"* a
   > b
   >
-* c
-"));
+* c"));
         }
 
         #endregion
@@ -438,14 +402,12 @@ namespace CommonPlex.CommonMark.Tests
 </code></pre>
 </li>
 <li>d</li>
-</ul>
-", GetHtml(@"- a
+</ul>", GetHtml(@"- a
   > b
   ```
   c
   ```
-- d
-"));
+- d"));
         }
 
         #endregion
@@ -456,9 +418,7 @@ namespace CommonPlex.CommonMark.Tests
         {
             Assert.Equal(@"<ul>
 <li>a</li>
-</ul>
-", GetHtml(@"- a
-"));
+</ul>", GetHtml(@"- a"));
         }
 
         #endregion
@@ -473,10 +433,8 @@ namespace CommonPlex.CommonMark.Tests
 <li>b</li>
 </ul>
 </li>
-</ul>
-", GetHtml(@"- a
-  - b
-"));
+</ul>", GetHtml(@"- a
+  - b"));
         }
 
         #endregion
@@ -491,13 +449,11 @@ namespace CommonPlex.CommonMark.Tests
 </code></pre>
 <p>bar</p>
 </li>
-</ol>
-", GetHtml(@"1. ```
+</ol>", GetHtml(@"1. ```
    foo
    ```
 
-   bar
-"));
+   bar"));
         }
 
         #endregion
@@ -514,12 +470,10 @@ namespace CommonPlex.CommonMark.Tests
 </ul>
 <p>baz</p>
 </li>
-</ul>
-", GetHtml(@"* foo
+</ul>", GetHtml(@"* foo
   * bar
 
-  baz
-"));
+  baz"));
         }
 
         #endregion
@@ -543,15 +497,13 @@ namespace CommonPlex.CommonMark.Tests
 <li>f</li>
 </ul>
 </li>
-</ul>
-", GetHtml(@"- a
+</ul>", GetHtml(@"- a
   - b
   - c
 
 - d
   - e
-  - f
-"));
+  - f"));
         }
 
         #endregion

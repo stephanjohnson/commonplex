@@ -11,10 +11,8 @@ namespace CommonPlex.CommonMark.Tests
         public void Example580()
         {
             Assert.Equal(@"<p>foo<br />
-baz</p>
-", GetHtml(@"foo  
-baz
-"));
+baz</p>", GetHtml(@"foo  
+baz"));
         }
 
         #endregion
@@ -24,10 +22,8 @@ baz
         public void Example581()
         {
             Assert.Equal(@"<p>foo<br />
-baz</p>
-", GetHtml(@"foo\
-baz
-"));
+baz</p>", GetHtml(@"foo\
+baz"));
         }
 
         #endregion
@@ -37,10 +33,8 @@ baz
         public void Example582()
         {
             Assert.Equal(@"<p>foo<br />
-baz</p>
-", GetHtml(@"foo       
-baz
-"));
+baz</p>", GetHtml(@"foo       
+baz"));
         }
 
         #endregion
@@ -50,10 +44,8 @@ baz
         public void Example583()
         {
             Assert.Equal(@"<p>foo<br />
-bar</p>
-", GetHtml(@"foo  
-     bar
-"));
+bar</p>", GetHtml(@"foo  
+     bar"));
         }
 
         #endregion
@@ -63,10 +55,8 @@ bar</p>
         public void Example584()
         {
             Assert.Equal(@"<p>foo<br />
-bar</p>
-", GetHtml(@"foo\
-     bar
-"));
+bar</p>", GetHtml(@"foo\
+     bar"));
         }
 
         #endregion
@@ -76,10 +66,8 @@ bar</p>
         public void Example585()
         {
             Assert.Equal(@"<p><em>foo<br />
-bar</em></p>
-", GetHtml(@"*foo  
-bar*
-"));
+bar</em></p>", GetHtml(@"*foo  
+bar*"));
         }
 
         #endregion
@@ -89,10 +77,8 @@ bar*
         public void Example586()
         {
             Assert.Equal(@"<p><em>foo<br />
-bar</em></p>
-", GetHtml(@"*foo\
-bar*
-"));
+bar</em></p>", GetHtml(@"*foo\
+bar*"));
         }
 
         #endregion
@@ -101,10 +87,8 @@ bar*
         [Fact]
         public void Example587()
         {
-            Assert.Equal(@"<p><code>code span</code></p>
-", GetHtml(@"`code  
-span`
-"));
+            Assert.Equal(@"<p><code>code span</code></p>", GetHtml(@"`code  
+span`"));
         }
 
         #endregion
@@ -113,10 +97,8 @@ span`
         [Fact]
         public void Example588()
         {
-            Assert.Equal(@"<p><code>code\ span</code></p>
-", GetHtml(@"`code\
-span`
-"));
+            Assert.Equal(@"<p><code>code\ span</code></p>", GetHtml(@"`code\
+span`"));
         }
 
         #endregion
@@ -126,10 +108,8 @@ span`
         public void Example589()
         {
             Assert.Equal(@"<p><a href=""foo  
-bar""></p>
-", GetHtml(@"<a href=""foo  
-bar"">
-"));
+bar""></p>", GetHtml(@"<a href=""foo  
+bar"">"));
         }
 
         #endregion
@@ -139,10 +119,8 @@ bar"">
         public void Example590()
         {
             Assert.Equal(@"<p><a href=""foo\
-bar""></p>
-", GetHtml(@"<a href=""foo\
-bar"">
-"));
+bar""></p>", GetHtml(@"<a href=""foo\
+bar"">"));
         }
 
         #endregion
@@ -151,9 +129,7 @@ bar"">
         [Fact]
         public void Example591()
         {
-            Assert.Equal(@"<p>foo\</p>
-", GetHtml(@"foo\
-"));
+            Assert.Equal(@"<p>foo\</p>", GetHtml(@"foo\"));
         }
 
         #endregion
@@ -162,9 +138,7 @@ bar"">
         [Fact]
         public void Example592()
         {
-            Assert.Equal(@"<p>foo</p>
-", GetHtml(@"foo  
-"));
+            Assert.Equal(@"<p>foo</p>", GetHtml(@"foo  "));
         }
 
         #endregion
@@ -173,9 +147,7 @@ bar"">
         [Fact]
         public void Example593()
         {
-            Assert.Equal(@"<h3>foo\</h3>
-", GetHtml(@"### foo\
-"));
+            Assert.Equal(@"<h3>foo\</h3>", GetHtml(@"### foo\"));
         }
 
         #endregion
@@ -184,9 +156,7 @@ bar"">
         [Fact]
         public void Example594()
         {
-            Assert.Equal(@"<h3>foo</h3>
-", GetHtml(@"### foo  
-"));
+            Assert.Equal(@"<h3>foo</h3>", GetHtml(@"### foo  "));
         }
 
         #endregion

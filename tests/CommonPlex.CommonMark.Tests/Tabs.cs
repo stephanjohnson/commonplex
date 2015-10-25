@@ -11,9 +11,7 @@ namespace CommonPlex.CommonMark.Tests
         public void Example001()
         {
             Assert.Equal(@"<pre><code>foo	baz		bim
-</code></pre>
-", GetHtml(@"	foo	baz		bim
-"));
+</code></pre>", GetHtml(@"	foo	baz		bim"));
         }
 
         #endregion
@@ -23,9 +21,7 @@ namespace CommonPlex.CommonMark.Tests
         public void Example002()
         {
             Assert.Equal(@"<pre><code>foo	baz		bim
-</code></pre>
-", GetHtml(@"  	foo	baz		bim
-"));
+</code></pre>", GetHtml(@"  	foo	baz		bim"));
         }
 
         #endregion
@@ -36,10 +32,8 @@ namespace CommonPlex.CommonMark.Tests
         {
             Assert.Equal(@"<pre><code>a	a
 ὐ	a
-</code></pre>
-", GetHtml(@"    a	a
-    ὐ	a
-"));
+</code></pre>", GetHtml(@"    a	a
+    ὐ	a"));
         }
 
         #endregion
@@ -53,11 +47,9 @@ namespace CommonPlex.CommonMark.Tests
 <p>foo</p>
 <p>bar</p>
 </li>
-</ul>
-", GetHtml(@"  - foo
+</ul>", GetHtml(@"  - foo
 
-	bar
-"));
+	bar"));
         }
 
         #endregion
@@ -68,9 +60,7 @@ namespace CommonPlex.CommonMark.Tests
         {
             Assert.Equal(@"<blockquote>
 <p>foo	bar</p>
-</blockquote>
-", GetHtml(@">	foo	bar
-"));
+</blockquote>", GetHtml(@">	foo	bar"));
         }
 
         #endregion
@@ -81,10 +71,8 @@ namespace CommonPlex.CommonMark.Tests
         {
             Assert.Equal(@"<pre><code>foo
 bar
-</code></pre>
-", GetHtml(@"    foo
-	bar
-"));
+</code></pre>", GetHtml(@"    foo
+	bar"));
         }
 
         #endregion

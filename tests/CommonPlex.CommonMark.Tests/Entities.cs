@@ -12,11 +12,9 @@ namespace CommonPlex.CommonMark.Tests
         {
             Assert.Equal(@"<p>  &amp; © Æ Ď
 ¾ ℋ ⅆ
-∲ ≧̸</p>
-", GetHtml(@"&nbsp; &amp; &copy; &AElig; &Dcaron;
+∲ ≧̸</p>", GetHtml(@"&nbsp; &amp; &copy; &AElig; &Dcaron;
 &frac34; &HilbertSpace; &DifferentialD;
-&ClockwiseContourIntegral; &ngE;
-"));
+&ClockwiseContourIntegral; &ngE;"));
         }
 
         #endregion
@@ -25,9 +23,7 @@ namespace CommonPlex.CommonMark.Tests
         [Fact]
         public void Example287()
         {
-            Assert.Equal(@"<p># Ӓ Ϡ � �</p>
-", GetHtml(@"&#35; &#1234; &#992; &#98765432; &#0;
-"));
+            Assert.Equal(@"<p># Ӓ Ϡ � �</p>", GetHtml(@"&#35; &#1234; &#992; &#98765432; &#0;"));
         }
 
         #endregion
@@ -36,9 +32,7 @@ namespace CommonPlex.CommonMark.Tests
         [Fact]
         public void Example288()
         {
-            Assert.Equal(@"<p>&quot; ആ ಫ</p>
-", GetHtml(@"&#X22; &#XD06; &#xcab;
-"));
+            Assert.Equal(@"<p>&quot; ആ ಫ</p>", GetHtml(@"&#X22; &#XD06; &#xcab;"));
         }
 
         #endregion
@@ -47,9 +41,7 @@ namespace CommonPlex.CommonMark.Tests
         [Fact]
         public void Example289()
         {
-            Assert.Equal(@"<p>&amp;nbsp &amp;x; &amp;#; &amp;#x; &amp;ThisIsWayTooLongToBeAnEntityIsntIt; &amp;hi?;</p>
-", GetHtml(@"&nbsp &x; &#; &#x; &ThisIsWayTooLongToBeAnEntityIsntIt; &hi?;
-"));
+            Assert.Equal(@"<p>&amp;nbsp &amp;x; &amp;#; &amp;#x; &amp;ThisIsWayTooLongToBeAnEntityIsntIt; &amp;hi?;</p>", GetHtml(@"&nbsp &x; &#; &#x; &ThisIsWayTooLongToBeAnEntityIsntIt; &hi?;"));
         }
 
         #endregion
@@ -58,9 +50,7 @@ namespace CommonPlex.CommonMark.Tests
         [Fact]
         public void Example290()
         {
-            Assert.Equal(@"<p>&amp;copy</p>
-", GetHtml(@"&copy
-"));
+            Assert.Equal(@"<p>&amp;copy</p>", GetHtml(@"&copy"));
         }
 
         #endregion
@@ -69,9 +59,7 @@ namespace CommonPlex.CommonMark.Tests
         [Fact]
         public void Example291()
         {
-            Assert.Equal(@"<p>&amp;MadeUpEntity;</p>
-", GetHtml(@"&MadeUpEntity;
-"));
+            Assert.Equal(@"<p>&amp;MadeUpEntity;</p>", GetHtml(@"&MadeUpEntity;"));
         }
 
         #endregion
@@ -80,9 +68,7 @@ namespace CommonPlex.CommonMark.Tests
         [Fact]
         public void Example292()
         {
-            Assert.Equal(@"<a href=""&ouml;&ouml;.html"">
-", GetHtml(@"<a href=""&ouml;&ouml;.html"">
-"));
+            Assert.Equal(@"<a href=""&ouml;&ouml;.html"">", GetHtml(@"<a href=""&ouml;&ouml;.html"">"));
         }
 
         #endregion
@@ -91,9 +77,7 @@ namespace CommonPlex.CommonMark.Tests
         [Fact]
         public void Example293()
         {
-            Assert.Equal(@"<p><a href=""/f%C3%B6%C3%B6"" title=""föö"">foo</a></p>
-", GetHtml(@"[foo](/f&ouml;&ouml; ""f&ouml;&ouml;"")
-"));
+            Assert.Equal(@"<p><a href=""/f%C3%B6%C3%B6"" title=""föö"">foo</a></p>", GetHtml(@"[foo](/f&ouml;&ouml; ""f&ouml;&ouml;"")"));
         }
 
         #endregion
@@ -102,11 +86,9 @@ namespace CommonPlex.CommonMark.Tests
         [Fact]
         public void Example294()
         {
-            Assert.Equal(@"<p><a href=""/f%C3%B6%C3%B6"" title=""föö"">foo</a></p>
-", GetHtml(@"[foo]
+            Assert.Equal(@"<p><a href=""/f%C3%B6%C3%B6"" title=""föö"">foo</a></p>", GetHtml(@"[foo]
 
-[foo]: /f&ouml;&ouml; ""f&ouml;&ouml;""
-"));
+[foo]: /f&ouml;&ouml; ""f&ouml;&ouml;"""));
         }
 
         #endregion
@@ -116,11 +98,9 @@ namespace CommonPlex.CommonMark.Tests
         public void Example295()
         {
             Assert.Equal(@"<pre><code class=""language-föö"">foo
-</code></pre>
-", GetHtml(@"``` f&ouml;&ouml;
+</code></pre>", GetHtml(@"``` f&ouml;&ouml;
 foo
-```
-"));
+```"));
         }
 
         #endregion
@@ -129,9 +109,7 @@ foo
         [Fact]
         public void Example296()
         {
-            Assert.Equal(@"<p><code>f&amp;ouml;&amp;ouml;</code></p>
-", GetHtml(@"`f&ouml;&ouml;`
-"));
+            Assert.Equal(@"<p><code>f&amp;ouml;&amp;ouml;</code></p>", GetHtml(@"`f&ouml;&ouml;`"));
         }
 
         #endregion
@@ -141,9 +119,7 @@ foo
         public void Example297()
         {
             Assert.Equal(@"<pre><code>f&amp;ouml;f&amp;ouml;
-</code></pre>
-", GetHtml(@"    f&ouml;f&ouml;
-"));
+</code></pre>", GetHtml(@"    f&ouml;f&ouml;"));
         }
 
         #endregion

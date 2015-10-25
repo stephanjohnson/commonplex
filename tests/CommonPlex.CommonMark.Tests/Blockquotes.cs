@@ -14,11 +14,9 @@ namespace CommonPlex.CommonMark.Tests
 <h1>Foo</h1>
 <p>bar
 baz</p>
-</blockquote>
-", GetHtml(@"> # Foo
+</blockquote>", GetHtml(@"> # Foo
 > bar
-> baz
-"));
+> baz"));
         }
 
         #endregion
@@ -31,11 +29,9 @@ baz</p>
 <h1>Foo</h1>
 <p>bar
 baz</p>
-</blockquote>
-", GetHtml(@"># Foo
+</blockquote>", GetHtml(@"># Foo
 >bar
-> baz
-"));
+> baz"));
         }
 
         #endregion
@@ -48,11 +44,9 @@ baz</p>
 <h1>Foo</h1>
 <p>bar
 baz</p>
-</blockquote>
-", GetHtml(@"   > # Foo
+</blockquote>", GetHtml(@"   > # Foo
    > bar
- > baz
-"));
+ > baz"));
         }
 
         #endregion
@@ -64,11 +58,9 @@ baz</p>
             Assert.Equal(@"<pre><code>&gt; # Foo
 &gt; bar
 &gt; baz
-</code></pre>
-", GetHtml(@"    > # Foo
+</code></pre>", GetHtml(@"    > # Foo
     > bar
-    > baz
-"));
+    > baz"));
         }
 
         #endregion
@@ -81,11 +73,9 @@ baz</p>
 <h1>Foo</h1>
 <p>bar
 baz</p>
-</blockquote>
-", GetHtml(@"> # Foo
+</blockquote>", GetHtml(@"> # Foo
 > bar
-baz
-"));
+baz"));
         }
 
         #endregion
@@ -98,11 +88,9 @@ baz
 <p>bar
 baz
 foo</p>
-</blockquote>
-", GetHtml(@"> bar
+</blockquote>", GetHtml(@"> bar
 baz
-> foo
-"));
+> foo"));
         }
 
         #endregion
@@ -114,10 +102,8 @@ baz
             Assert.Equal(@"<blockquote>
 <p>foo</p>
 </blockquote>
-<hr />
-", GetHtml(@"> foo
----
-"));
+<hr />", GetHtml(@"> foo
+---"));
         }
 
         #endregion
@@ -133,10 +119,8 @@ baz
 </blockquote>
 <ul>
 <li>bar</li>
-</ul>
-", GetHtml(@"> - foo
-- bar
-"));
+</ul>", GetHtml(@"> - foo
+- bar"));
         }
 
         #endregion
@@ -150,10 +134,8 @@ baz
 </code></pre>
 </blockquote>
 <pre><code>bar
-</code></pre>
-", GetHtml(@">     foo
-    bar
-"));
+</code></pre>", GetHtml(@">     foo
+    bar"));
         }
 
         #endregion
@@ -166,11 +148,9 @@ baz
 <pre><code></code></pre>
 </blockquote>
 <p>foo</p>
-<pre><code></code></pre>
-", GetHtml(@"> ```
+<pre><code></code></pre>", GetHtml(@"> ```
 foo
-```
-"));
+```"));
         }
 
         #endregion
@@ -182,10 +162,8 @@ foo
             Assert.Equal(@"<blockquote>
 <p>foo
 - bar</p>
-</blockquote>
-", GetHtml(@"> foo
-    - bar
-"));
+</blockquote>", GetHtml(@"> foo
+    - bar"));
         }
 
         #endregion
@@ -195,9 +173,7 @@ foo
         public void Example189()
         {
             Assert.Equal(@"<blockquote>
-</blockquote>
-", GetHtml(@">
-"));
+</blockquote>", GetHtml(@">"));
         }
 
         #endregion
@@ -207,11 +183,9 @@ foo
         public void Example190()
         {
             Assert.Equal(@"<blockquote>
-</blockquote>
-", GetHtml(@">
+</blockquote>", GetHtml(@">
 >  
-> 
-"));
+> "));
         }
 
         #endregion
@@ -222,11 +196,9 @@ foo
         {
             Assert.Equal(@"<blockquote>
 <p>foo</p>
-</blockquote>
-", GetHtml(@">
+</blockquote>", GetHtml(@">
 > foo
->  
-"));
+>  "));
         }
 
         #endregion
@@ -240,11 +212,9 @@ foo
 </blockquote>
 <blockquote>
 <p>bar</p>
-</blockquote>
-", GetHtml(@"> foo
+</blockquote>", GetHtml(@"> foo
 
-> bar
-"));
+> bar"));
         }
 
         #endregion
@@ -256,10 +226,8 @@ foo
             Assert.Equal(@"<blockquote>
 <p>foo
 bar</p>
-</blockquote>
-", GetHtml(@"> foo
-> bar
-"));
+</blockquote>", GetHtml(@"> foo
+> bar"));
         }
 
         #endregion
@@ -271,11 +239,9 @@ bar</p>
             Assert.Equal(@"<blockquote>
 <p>foo</p>
 <p>bar</p>
-</blockquote>
-", GetHtml(@"> foo
+</blockquote>", GetHtml(@"> foo
 >
-> bar
-"));
+> bar"));
         }
 
         #endregion
@@ -287,10 +253,8 @@ bar</p>
             Assert.Equal(@"<p>foo</p>
 <blockquote>
 <p>bar</p>
-</blockquote>
-", GetHtml(@"foo
-> bar
-"));
+</blockquote>", GetHtml(@"foo
+> bar"));
         }
 
         #endregion
@@ -305,11 +269,9 @@ bar</p>
 <hr />
 <blockquote>
 <p>bbb</p>
-</blockquote>
-", GetHtml(@"> aaa
+</blockquote>", GetHtml(@"> aaa
 ***
-> bbb
-"));
+> bbb"));
         }
 
         #endregion
@@ -321,10 +283,8 @@ bar</p>
             Assert.Equal(@"<blockquote>
 <p>bar
 baz</p>
-</blockquote>
-", GetHtml(@"> bar
-baz
-"));
+</blockquote>", GetHtml(@"> bar
+baz"));
         }
 
         #endregion
@@ -336,11 +296,9 @@ baz
             Assert.Equal(@"<blockquote>
 <p>bar</p>
 </blockquote>
-<p>baz</p>
-", GetHtml(@"> bar
+<p>baz</p>", GetHtml(@"> bar
 
-baz
-"));
+baz"));
         }
 
         #endregion
@@ -352,11 +310,9 @@ baz
             Assert.Equal(@"<blockquote>
 <p>bar</p>
 </blockquote>
-<p>baz</p>
-", GetHtml(@"> bar
+<p>baz</p>", GetHtml(@"> bar
 >
-baz
-"));
+baz"));
         }
 
         #endregion
@@ -372,10 +328,8 @@ baz
 bar</p>
 </blockquote>
 </blockquote>
-</blockquote>
-", GetHtml(@"> > > foo
-bar
-"));
+</blockquote>", GetHtml(@"> > > foo
+bar"));
         }
 
         #endregion
@@ -392,11 +346,9 @@ bar
 baz</p>
 </blockquote>
 </blockquote>
-</blockquote>
-", GetHtml(@">>> foo
+</blockquote>", GetHtml(@">>> foo
 > bar
->>baz
-"));
+>>baz"));
         }
 
         #endregion
@@ -411,11 +363,9 @@ baz</p>
 </blockquote>
 <blockquote>
 <p>not code</p>
-</blockquote>
-", GetHtml(@">     code
+</blockquote>", GetHtml(@">     code
 
->    not code
-"));
+>    not code"));
         }
 
         #endregion

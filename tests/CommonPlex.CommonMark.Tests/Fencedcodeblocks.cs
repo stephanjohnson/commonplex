@@ -12,12 +12,10 @@ namespace CommonPlex.CommonMark.Tests
         {
             Assert.Equal(@"<pre><code>&lt;
  &gt;
-</code></pre>
-", GetHtml(@"```
+</code></pre>", GetHtml(@"```
 <
  >
-```
-"));
+```"));
         }
 
         #endregion
@@ -28,12 +26,10 @@ namespace CommonPlex.CommonMark.Tests
         {
             Assert.Equal(@"<pre><code>&lt;
  &gt;
-</code></pre>
-", GetHtml(@"~~~
+</code></pre>", GetHtml(@"~~~
 <
  >
-~~~
-"));
+~~~"));
         }
 
         #endregion
@@ -44,12 +40,10 @@ namespace CommonPlex.CommonMark.Tests
         {
             Assert.Equal(@"<pre><code>aaa
 ~~~
-</code></pre>
-", GetHtml(@"```
+</code></pre>", GetHtml(@"```
 aaa
 ~~~
-```
-"));
+```"));
         }
 
         #endregion
@@ -60,12 +54,10 @@ aaa
         {
             Assert.Equal(@"<pre><code>aaa
 ```
-</code></pre>
-", GetHtml(@"~~~
+</code></pre>", GetHtml(@"~~~
 aaa
 ```
-~~~
-"));
+~~~"));
         }
 
         #endregion
@@ -76,12 +68,10 @@ aaa
         {
             Assert.Equal(@"<pre><code>aaa
 ```
-</code></pre>
-", GetHtml(@"````
+</code></pre>", GetHtml(@"````
 aaa
 ```
-``````
-"));
+``````"));
         }
 
         #endregion
@@ -92,12 +82,10 @@ aaa
         {
             Assert.Equal(@"<pre><code>aaa
 ~~~
-</code></pre>
-", GetHtml(@"~~~~
+</code></pre>", GetHtml(@"~~~~
 aaa
 ~~~
-~~~~
-"));
+~~~~"));
         }
 
         #endregion
@@ -106,9 +94,7 @@ aaa
         [Fact]
         public void Example083()
         {
-            Assert.Equal(@"<pre><code></code></pre>
-", GetHtml(@"```
-"));
+            Assert.Equal(@"<pre><code></code></pre>", GetHtml(@"```"));
         }
 
         #endregion
@@ -120,12 +106,10 @@ aaa
             Assert.Equal(@"<pre><code>
 ```
 aaa
-</code></pre>
-", GetHtml(@"`````
+</code></pre>", GetHtml(@"`````
 
 ```
-aaa
-"));
+aaa"));
         }
 
         #endregion
@@ -138,12 +122,10 @@ aaa
 <pre><code>aaa
 </code></pre>
 </blockquote>
-<p>bbb</p>
-", GetHtml(@"> ```
+<p>bbb</p>", GetHtml(@"> ```
 > aaa
 
-bbb
-"));
+bbb"));
         }
 
         #endregion
@@ -154,12 +136,10 @@ bbb
         {
             Assert.Equal(@"<pre><code>
   
-</code></pre>
-", GetHtml(@"```
+</code></pre>", GetHtml(@"```
 
   
-```
-"));
+```"));
         }
 
         #endregion
@@ -168,10 +148,8 @@ bbb
         [Fact]
         public void Example087()
         {
-            Assert.Equal(@"<pre><code></code></pre>
-", GetHtml(@"```
-```
-"));
+            Assert.Equal(@"<pre><code></code></pre>", GetHtml(@"```
+```"));
         }
 
         #endregion
@@ -182,12 +160,10 @@ bbb
         {
             Assert.Equal(@"<pre><code>aaa
 aaa
-</code></pre>
-", GetHtml(@" ```
+</code></pre>", GetHtml(@" ```
  aaa
 aaa
-```
-"));
+```"));
         }
 
         #endregion
@@ -199,13 +175,11 @@ aaa
             Assert.Equal(@"<pre><code>aaa
 aaa
 aaa
-</code></pre>
-", GetHtml(@"  ```
+</code></pre>", GetHtml(@"  ```
 aaa
   aaa
 aaa
-  ```
-"));
+  ```"));
         }
 
         #endregion
@@ -217,13 +191,11 @@ aaa
             Assert.Equal(@"<pre><code>aaa
  aaa
 aaa
-</code></pre>
-", GetHtml(@"   ```
+</code></pre>", GetHtml(@"   ```
    aaa
     aaa
   aaa
-   ```
-"));
+   ```"));
         }
 
         #endregion
@@ -235,11 +207,9 @@ aaa
             Assert.Equal(@"<pre><code>```
 aaa
 ```
-</code></pre>
-", GetHtml(@"    ```
+</code></pre>", GetHtml(@"    ```
     aaa
-    ```
-"));
+    ```"));
         }
 
         #endregion
@@ -249,11 +219,9 @@ aaa
         public void Example092()
         {
             Assert.Equal(@"<pre><code>aaa
-</code></pre>
-", GetHtml(@"```
+</code></pre>", GetHtml(@"```
 aaa
-  ```
-"));
+  ```"));
         }
 
         #endregion
@@ -263,11 +231,9 @@ aaa
         public void Example093()
         {
             Assert.Equal(@"<pre><code>aaa
-</code></pre>
-", GetHtml(@"   ```
+</code></pre>", GetHtml(@"   ```
 aaa
-  ```
-"));
+  ```"));
         }
 
         #endregion
@@ -278,11 +244,9 @@ aaa
         {
             Assert.Equal(@"<pre><code>aaa
     ```
-</code></pre>
-", GetHtml(@"```
+</code></pre>", GetHtml(@"```
 aaa
-    ```
-"));
+    ```"));
         }
 
         #endregion
@@ -292,10 +256,8 @@ aaa
         public void Example095()
         {
             Assert.Equal(@"<p><code></code>
-aaa</p>
-", GetHtml(@"``` ```
-aaa
-"));
+aaa</p>", GetHtml(@"``` ```
+aaa"));
         }
 
         #endregion
@@ -306,11 +268,9 @@ aaa
         {
             Assert.Equal(@"<pre><code>aaa
 ~~~ ~~
-</code></pre>
-", GetHtml(@"~~~~~~
+</code></pre>", GetHtml(@"~~~~~~
 aaa
-~~~ ~~
-"));
+~~~ ~~"));
         }
 
         #endregion
@@ -322,13 +282,11 @@ aaa
             Assert.Equal(@"<p>foo</p>
 <pre><code>bar
 </code></pre>
-<p>baz</p>
-", GetHtml(@"foo
+<p>baz</p>", GetHtml(@"foo
 ```
 bar
 ```
-baz
-"));
+baz"));
         }
 
         #endregion
@@ -340,14 +298,12 @@ baz
             Assert.Equal(@"<h2>foo</h2>
 <pre><code>bar
 </code></pre>
-<h1>baz</h1>
-", GetHtml(@"foo
+<h1>baz</h1>", GetHtml(@"foo
 ---
 ~~~
 bar
 ~~~
-# baz
-"));
+# baz"));
         }
 
         #endregion
@@ -359,13 +315,11 @@ bar
             Assert.Equal(@"<pre><code class=""language-ruby"">def foo(x)
   return 3
 end
-</code></pre>
-", GetHtml(@"```ruby
+</code></pre>", GetHtml(@"```ruby
 def foo(x)
   return 3
 end
-```
-"));
+```"));
         }
 
         #endregion
@@ -377,13 +331,11 @@ end
             Assert.Equal(@"<pre><code class=""language-ruby"">def foo(x)
   return 3
 end
-</code></pre>
-", GetHtml(@"~~~~    ruby startline=3 $%@#$
+</code></pre>", GetHtml(@"~~~~    ruby startline=3 $%@#$
 def foo(x)
   return 3
 end
-~~~~~~~
-"));
+~~~~~~~"));
         }
 
         #endregion
@@ -392,10 +344,8 @@ end
         [Fact]
         public void Example101()
         {
-            Assert.Equal(@"<pre><code class=""language-;""></code></pre>
-", GetHtml(@"````;
-````
-"));
+            Assert.Equal(@"<pre><code class=""language-;""></code></pre>", GetHtml(@"````;
+````"));
         }
 
         #endregion
@@ -405,10 +355,8 @@ end
         public void Example102()
         {
             Assert.Equal(@"<p><code>aa</code>
-foo</p>
-", GetHtml(@"``` aa ```
-foo
-"));
+foo</p>", GetHtml(@"``` aa ```
+foo"));
         }
 
         #endregion
@@ -418,11 +366,9 @@ foo
         public void Example103()
         {
             Assert.Equal(@"<pre><code>``` aaa
-</code></pre>
-", GetHtml(@"```
+</code></pre>", GetHtml(@"```
 ``` aaa
-```
-"));
+```"));
         }
 
         #endregion

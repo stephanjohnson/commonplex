@@ -13,10 +13,8 @@ namespace CommonPlex.CommonMark.Tests
             Assert.Equal(@"<ul>
 <li>`one</li>
 <li>two`</li>
-</ul>
-", GetHtml(@"- `one
-- two`
-"));
+</ul>", GetHtml(@"- `one
+- two`"));
         }
 
         #endregion

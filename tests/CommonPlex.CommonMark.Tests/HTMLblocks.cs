@@ -17,8 +17,7 @@ namespace CommonPlex.CommonMark.Tests
     </td>
   </tr>
 </table>
-<p>okay.</p>
-", GetHtml(@"<table>
+<p>okay.</p>", GetHtml(@"<table>
   <tr>
     <td>
            hi
@@ -26,8 +25,7 @@ namespace CommonPlex.CommonMark.Tests
   </tr>
 </table>
 
-okay.
-"));
+okay."));
         }
 
         #endregion
@@ -38,11 +36,9 @@ okay.
         {
             Assert.Equal(@" <div>
   *hello*
-         <foo><a>
-", GetHtml(@" <div>
+         <foo><a>", GetHtml(@" <div>
   *hello*
-         <foo><a>
-"));
+         <foo><a>"));
         }
 
         #endregion
@@ -52,10 +48,8 @@ okay.
         public void Example106()
         {
             Assert.Equal(@"</div>
-*foo*
-", GetHtml(@"</div>
-*foo*
-"));
+*foo*", GetHtml(@"</div>
+*foo*"));
         }
 
         #endregion
@@ -66,13 +60,11 @@ okay.
         {
             Assert.Equal(@"<DIV CLASS=""foo"">
 <p><em>Markdown</em></p>
-</DIV>
-", GetHtml(@"<DIV CLASS=""foo"">
+</DIV>", GetHtml(@"<DIV CLASS=""foo"">
 
 *Markdown*
 
-</DIV>
-"));
+</DIV>"));
         }
 
         #endregion
@@ -83,11 +75,9 @@ okay.
         {
             Assert.Equal(@"<div id=""foo""
   class=""bar"">
-</div>
-", GetHtml(@"<div id=""foo""
+</div>", GetHtml(@"<div id=""foo""
   class=""bar"">
-</div>
-"));
+</div>"));
         }
 
         #endregion
@@ -98,11 +88,9 @@ okay.
         {
             Assert.Equal(@"<div id=""foo"" class=""bar
   baz"">
-</div>
-", GetHtml(@"<div id=""foo"" class=""bar
+</div>", GetHtml(@"<div id=""foo"" class=""bar
   baz"">
-</div>
-"));
+</div>"));
         }
 
         #endregion
@@ -113,12 +101,10 @@ okay.
         {
             Assert.Equal(@"<div>
 *foo*
-<p><em>bar</em></p>
-", GetHtml(@"<div>
+<p><em>bar</em></p>", GetHtml(@"<div>
 *foo*
 
-*bar*
-"));
+*bar*"));
         }
 
         #endregion
@@ -128,10 +114,8 @@ okay.
         public void Example111()
         {
             Assert.Equal(@"<div id=""foo""
-*hi*
-", GetHtml(@"<div id=""foo""
-*hi*
-"));
+*hi*", GetHtml(@"<div id=""foo""
+*hi*"));
         }
 
         #endregion
@@ -141,10 +125,8 @@ okay.
         public void Example112()
         {
             Assert.Equal(@"<div class
-foo
-", GetHtml(@"<div class
-foo
-"));
+foo", GetHtml(@"<div class
+foo"));
         }
 
         #endregion
@@ -154,10 +136,8 @@ foo
         public void Example113()
         {
             Assert.Equal(@"<div *???-&&&-<---
-*foo*
-", GetHtml(@"<div *???-&&&-<---
-*foo*
-"));
+*foo*", GetHtml(@"<div *???-&&&-<---
+*foo*"));
         }
 
         #endregion
@@ -166,9 +146,7 @@ foo
         [Fact]
         public void Example114()
         {
-            Assert.Equal(@"<div><a href=""bar"">*foo*</a></div>
-", GetHtml(@"<div><a href=""bar"">*foo*</a></div>
-"));
+            Assert.Equal(@"<div><a href=""bar"">*foo*</a></div>", GetHtml(@"<div><a href=""bar"">*foo*</a></div>"));
         }
 
         #endregion
@@ -179,11 +157,9 @@ foo
         {
             Assert.Equal(@"<table><tr><td>
 foo
-</td></tr></table>
-", GetHtml(@"<table><tr><td>
+</td></tr></table>", GetHtml(@"<table><tr><td>
 foo
-</td></tr></table>
-"));
+</td></tr></table>"));
         }
 
         #endregion
@@ -195,12 +171,10 @@ foo
             Assert.Equal(@"<div></div>
 ``` c
 int x = 33;
-```
-", GetHtml(@"<div></div>
+```", GetHtml(@"<div></div>
 ``` c
 int x = 33;
-```
-"));
+```"));
         }
 
         #endregion
@@ -211,11 +185,9 @@ int x = 33;
         {
             Assert.Equal(@"<a href=""foo"">
 *bar*
-</a>
-", GetHtml(@"<a href=""foo"">
+</a>", GetHtml(@"<a href=""foo"">
 *bar*
-</a>
-"));
+</a>"));
         }
 
         #endregion
@@ -226,11 +198,9 @@ int x = 33;
         {
             Assert.Equal(@"<Warning>
 *bar*
-</Warning>
-", GetHtml(@"<Warning>
+</Warning>", GetHtml(@"<Warning>
 *bar*
-</Warning>
-"));
+</Warning>"));
         }
 
         #endregion
@@ -241,11 +211,9 @@ int x = 33;
         {
             Assert.Equal(@"<i class=""foo"">
 *bar*
-</i>
-", GetHtml(@"<i class=""foo"">
+</i>", GetHtml(@"<i class=""foo"">
 *bar*
-</i>
-"));
+</i>"));
         }
 
         #endregion
@@ -255,10 +223,8 @@ int x = 33;
         public void Example120()
         {
             Assert.Equal(@"</ins>
-*bar*
-", GetHtml(@"</ins>
-*bar*
-"));
+*bar*", GetHtml(@"</ins>
+*bar*"));
         }
 
         #endregion
@@ -269,11 +235,9 @@ int x = 33;
         {
             Assert.Equal(@"<del>
 *foo*
-</del>
-", GetHtml(@"<del>
+</del>", GetHtml(@"<del>
 *foo*
-</del>
-"));
+</del>"));
         }
 
         #endregion
@@ -284,13 +248,11 @@ int x = 33;
         {
             Assert.Equal(@"<del>
 <p><em>foo</em></p>
-</del>
-", GetHtml(@"<del>
+</del>", GetHtml(@"<del>
 
 *foo*
 
-</del>
-"));
+</del>"));
         }
 
         #endregion
@@ -299,9 +261,7 @@ int x = 33;
         [Fact]
         public void Example123()
         {
-            Assert.Equal(@"<p><del><em>foo</em></del></p>
-", GetHtml(@"<del>*foo*</del>
-"));
+            Assert.Equal(@"<p><del><em>foo</em></del></p>", GetHtml(@"<del>*foo*</del>"));
         }
 
         #endregion
@@ -315,14 +275,12 @@ import Text.HTML.TagSoup
 
 main :: IO ()
 main = print $ parseTags tags
-</code></pre>
-", GetHtml(@"<pre language=""haskell""><code>
+</code></pre>", GetHtml(@"<pre language=""haskell""><code>
 import Text.HTML.TagSoup
 
 main :: IO ()
 main = print $ parseTags tags
-</code></pre>
-"));
+</code></pre>"));
         }
 
         #endregion
@@ -335,13 +293,11 @@ main = print $ parseTags tags
 // JavaScript example
 
 document.getElementById(""demo"").innerHTML = ""Hello JavaScript!"";
-</script>
-", GetHtml(@"<script type=""text/javascript"">
+</script>", GetHtml(@"<script type=""text/javascript"">
 // JavaScript example
 
 document.getElementById(""demo"").innerHTML = ""Hello JavaScript!"";
-</script>
-"));
+</script>"));
         }
 
         #endregion
@@ -355,14 +311,12 @@ document.getElementById(""demo"").innerHTML = ""Hello JavaScript!"";
 h1 {color:red;}
 
 p {color:blue;}
-</style>
-", GetHtml(@"<style
+</style>", GetHtml(@"<style
   type=""text/css"">
 h1 {color:red;}
 
 p {color:blue;}
-</style>
-"));
+</style>"));
         }
 
         #endregion
@@ -374,12 +328,10 @@ p {color:blue;}
             Assert.Equal(@"<style
   type=""text/css"">
 
-foo
-", GetHtml(@"<style
+foo", GetHtml(@"<style
   type=""text/css"">
 
-foo
-"));
+foo"));
         }
 
         #endregion
@@ -392,12 +344,10 @@ foo
 <div>
 foo
 </blockquote>
-<p>bar</p>
-", GetHtml(@"> <div>
+<p>bar</p>", GetHtml(@"> <div>
 > foo
 
-bar
-"));
+bar"));
         }
 
         #endregion
@@ -411,10 +361,8 @@ bar
 <div>
 </li>
 <li>foo</li>
-</ul>
-", GetHtml(@"- <div>
-- foo
-"));
+</ul>", GetHtml(@"- <div>
+- foo"));
         }
 
         #endregion
@@ -424,10 +372,8 @@ bar
         public void Example130()
         {
             Assert.Equal(@"<style>p{color:red;}</style>
-<p><em>foo</em></p>
-", GetHtml(@"<style>p{color:red;}</style>
-*foo*
-"));
+<p><em>foo</em></p>", GetHtml(@"<style>p{color:red;}</style>
+*foo*"));
         }
 
         #endregion
@@ -437,10 +383,8 @@ bar
         public void Example131()
         {
             Assert.Equal(@"<!-- foo -->*bar*
-<p><em>baz</em></p>
-", GetHtml(@"<!-- foo -->*bar*
-*baz*
-"));
+<p><em>baz</em></p>", GetHtml(@"<!-- foo -->*bar*
+*baz*"));
         }
 
         #endregion
@@ -451,11 +395,9 @@ bar
         {
             Assert.Equal(@"<script>
 foo
-</script>1. *bar*
-", GetHtml(@"<script>
+</script>1. *bar*", GetHtml(@"<script>
 foo
-</script>1. *bar*
-"));
+</script>1. *bar*"));
         }
 
         #endregion
@@ -467,12 +409,10 @@ foo
             Assert.Equal(@"<!-- Foo
 
 bar
-   baz -->
-", GetHtml(@"<!-- Foo
+   baz -->", GetHtml(@"<!-- Foo
 
 bar
-   baz -->
-"));
+   baz -->"));
         }
 
         #endregion
@@ -485,13 +425,11 @@ bar
 
   echo '>';
 
-?>
-", GetHtml(@"<?php
+?>", GetHtml(@"<?php
 
   echo '>';
 
-?>
-"));
+?>"));
         }
 
         #endregion
@@ -500,9 +438,7 @@ bar
         [Fact]
         public void Example135()
         {
-            Assert.Equal(@"<!DOCTYPE html>
-", GetHtml(@"<!DOCTYPE html>
-"));
+            Assert.Equal(@"<!DOCTYPE html>", GetHtml(@"<!DOCTYPE html>"));
         }
 
         #endregion
@@ -522,8 +458,7 @@ function matchwo(a,b)
     return 0;
   }
 }
-]]>
-", GetHtml(@"<![CDATA[
+]]>", GetHtml(@"<![CDATA[
 function matchwo(a,b)
 {
   if (a < b && a < 0) then {
@@ -534,8 +469,7 @@ function matchwo(a,b)
     return 0;
   }
 }
-]]>
-"));
+]]>"));
         }
 
         #endregion
@@ -546,11 +480,9 @@ function matchwo(a,b)
         {
             Assert.Equal(@"  <!-- foo -->
 <pre><code>&lt;!-- foo --&gt;
-</code></pre>
-", GetHtml(@"  <!-- foo -->
+</code></pre>", GetHtml(@"  <!-- foo -->
 
-    <!-- foo -->
-"));
+    <!-- foo -->"));
         }
 
         #endregion
@@ -561,11 +493,9 @@ function matchwo(a,b)
         {
             Assert.Equal(@"  <div>
 <pre><code>&lt;div&gt;
-</code></pre>
-", GetHtml(@"  <div>
+</code></pre>", GetHtml(@"  <div>
 
-    <div>
-"));
+    <div>"));
         }
 
         #endregion
@@ -577,12 +507,10 @@ function matchwo(a,b)
             Assert.Equal(@"<p>Foo</p>
 <div>
 bar
-</div>
-", GetHtml(@"Foo
+</div>", GetHtml(@"Foo
 <div>
 bar
-</div>
-"));
+</div>"));
         }
 
         #endregion
@@ -594,12 +522,10 @@ bar
             Assert.Equal(@"<div>
 bar
 </div>
-*foo*
-", GetHtml(@"<div>
+*foo*", GetHtml(@"<div>
 bar
 </div>
-*foo*
-"));
+*foo*"));
         }
 
         #endregion
@@ -610,11 +536,9 @@ bar
         {
             Assert.Equal(@"<p>Foo
 <a href=""bar"">
-baz</p>
-", GetHtml(@"Foo
+baz</p>", GetHtml(@"Foo
 <a href=""bar"">
-baz
-"));
+baz"));
         }
 
         #endregion
@@ -625,13 +549,11 @@ baz
         {
             Assert.Equal(@"<div>
 <p><em>Emphasized</em> text.</p>
-</div>
-", GetHtml(@"<div>
+</div>", GetHtml(@"<div>
 
 *Emphasized* text.
 
-</div>
-"));
+</div>"));
         }
 
         #endregion
@@ -642,11 +564,9 @@ baz
         {
             Assert.Equal(@"<div>
 *Emphasized* text.
-</div>
-", GetHtml(@"<div>
+</div>", GetHtml(@"<div>
 *Emphasized* text.
-</div>
-"));
+</div>"));
         }
 
         #endregion
@@ -661,8 +581,7 @@ baz
 Hi
 </td>
 </tr>
-</table>
-", GetHtml(@"<table>
+</table>", GetHtml(@"<table>
 
 <tr>
 
@@ -672,8 +591,7 @@ Hi
 
 </tr>
 
-</table>
-"));
+</table>"));
         }
 
         #endregion
@@ -689,8 +607,7 @@ Hi
 &lt;/td&gt;
 </code></pre>
   </tr>
-</table>
-", GetHtml(@"<table>
+</table>", GetHtml(@"<table>
 
   <tr>
 
@@ -700,8 +617,7 @@ Hi
 
   </tr>
 
-</table>
-"));
+</table>"));
         }
 
         #endregion

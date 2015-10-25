@@ -10,9 +10,7 @@ namespace CommonPlex.CommonMark.Tests
         [Fact]
         public void Example597()
         {
-            Assert.Equal(@"<p>hello $.;'there</p>
-", GetHtml(@"hello $.;'there
-"));
+            Assert.Equal(@"<p>hello $.;'there</p>", GetHtml(@"hello $.;'there"));
         }
 
         #endregion
@@ -21,9 +19,7 @@ namespace CommonPlex.CommonMark.Tests
         [Fact]
         public void Example598()
         {
-            Assert.Equal(@"<p>Foo χρῆν</p>
-", GetHtml(@"Foo χρῆν
-"));
+            Assert.Equal(@"<p>Foo χρῆν</p>", GetHtml(@"Foo χρῆν"));
         }
 
         #endregion
@@ -32,9 +28,7 @@ namespace CommonPlex.CommonMark.Tests
         [Fact]
         public void Example599()
         {
-            Assert.Equal(@"<p>Multiple     spaces</p>
-", GetHtml(@"Multiple     spaces
-"));
+            Assert.Equal(@"<p>Multiple     spaces</p>", GetHtml(@"Multiple     spaces"));
         }
 
         #endregion

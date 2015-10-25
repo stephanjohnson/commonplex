@@ -8,7 +8,7 @@ namespace CommonPlex.CommonMark.Tests
 
         protected static string GetHtml(string markdown)
         {
-            return s_renderer.Render(markdown);
+            return s_renderer.Render(markdown).Replace("\r", "\r\n");
         }
     }
 }

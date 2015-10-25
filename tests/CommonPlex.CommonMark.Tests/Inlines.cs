@@ -10,9 +10,7 @@ namespace CommonPlex.CommonMark.Tests
         [Fact]
         public void Example272()
         {
-            Assert.Equal(@"<p><code>hi</code>lo`</p>
-", GetHtml(@"`hi`lo`
-"));
+            Assert.Equal(@"<p><code>hi</code>lo`</p>", GetHtml(@"`hi`lo`"));
         }
 
         #endregion

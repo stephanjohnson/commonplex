@@ -10,9 +10,7 @@ namespace CommonPlex.CommonMark.Tests
         [Fact]
         public void Example521()
         {
-            Assert.Equal(@"<p><img src=""/url"" alt=""foo"" title=""title"" /></p>
-", GetHtml(@"![foo](/url ""title"")
-"));
+            Assert.Equal(@"<p><img src=""/url"" alt=""foo"" title=""title"" /></p>", GetHtml(@"![foo](/url ""title"")"));
         }
 
         #endregion
@@ -21,11 +19,9 @@ namespace CommonPlex.CommonMark.Tests
         [Fact]
         public void Example522()
         {
-            Assert.Equal(@"<p><img src=""train.jpg"" alt=""foo bar"" title=""train &amp; tracks"" /></p>
-", GetHtml(@"![foo *bar*]
+            Assert.Equal(@"<p><img src=""train.jpg"" alt=""foo bar"" title=""train &amp; tracks"" /></p>", GetHtml(@"![foo *bar*]
 
-[foo *bar*]: train.jpg ""train & tracks""
-"));
+[foo *bar*]: train.jpg ""train & tracks"""));
         }
 
         #endregion
@@ -34,9 +30,7 @@ namespace CommonPlex.CommonMark.Tests
         [Fact]
         public void Example523()
         {
-            Assert.Equal(@"<p><img src=""/url2"" alt=""foo bar"" /></p>
-", GetHtml(@"![foo ![bar](/url)](/url2)
-"));
+            Assert.Equal(@"<p><img src=""/url2"" alt=""foo bar"" /></p>", GetHtml(@"![foo ![bar](/url)](/url2)"));
         }
 
         #endregion
@@ -45,9 +39,7 @@ namespace CommonPlex.CommonMark.Tests
         [Fact]
         public void Example524()
         {
-            Assert.Equal(@"<p><img src=""/url2"" alt=""foo bar"" /></p>
-", GetHtml(@"![foo [bar](/url)](/url2)
-"));
+            Assert.Equal(@"<p><img src=""/url2"" alt=""foo bar"" /></p>", GetHtml(@"![foo [bar](/url)](/url2)"));
         }
 
         #endregion
@@ -56,11 +48,9 @@ namespace CommonPlex.CommonMark.Tests
         [Fact]
         public void Example525()
         {
-            Assert.Equal(@"<p><img src=""train.jpg"" alt=""foo bar"" title=""train &amp; tracks"" /></p>
-", GetHtml(@"![foo *bar*][]
+            Assert.Equal(@"<p><img src=""train.jpg"" alt=""foo bar"" title=""train &amp; tracks"" /></p>", GetHtml(@"![foo *bar*][]
 
-[foo *bar*]: train.jpg ""train & tracks""
-"));
+[foo *bar*]: train.jpg ""train & tracks"""));
         }
 
         #endregion
@@ -69,11 +59,9 @@ namespace CommonPlex.CommonMark.Tests
         [Fact]
         public void Example526()
         {
-            Assert.Equal(@"<p><img src=""train.jpg"" alt=""foo bar"" title=""train &amp; tracks"" /></p>
-", GetHtml(@"![foo *bar*][foobar]
+            Assert.Equal(@"<p><img src=""train.jpg"" alt=""foo bar"" title=""train &amp; tracks"" /></p>", GetHtml(@"![foo *bar*][foobar]
 
-[FOOBAR]: train.jpg ""train & tracks""
-"));
+[FOOBAR]: train.jpg ""train & tracks"""));
         }
 
         #endregion
@@ -82,9 +70,7 @@ namespace CommonPlex.CommonMark.Tests
         [Fact]
         public void Example527()
         {
-            Assert.Equal(@"<p><img src=""train.jpg"" alt=""foo"" /></p>
-", GetHtml(@"![foo](train.jpg)
-"));
+            Assert.Equal(@"<p><img src=""train.jpg"" alt=""foo"" /></p>", GetHtml(@"![foo](train.jpg)"));
         }
 
         #endregion
@@ -93,9 +79,7 @@ namespace CommonPlex.CommonMark.Tests
         [Fact]
         public void Example528()
         {
-            Assert.Equal(@"<p>My <img src=""/path/to/train.jpg"" alt=""foo bar"" title=""title"" /></p>
-", GetHtml(@"My ![foo bar](/path/to/train.jpg  ""title""   )
-"));
+            Assert.Equal(@"<p>My <img src=""/path/to/train.jpg"" alt=""foo bar"" title=""title"" /></p>", GetHtml(@"My ![foo bar](/path/to/train.jpg  ""title""   )"));
         }
 
         #endregion
@@ -104,9 +88,7 @@ namespace CommonPlex.CommonMark.Tests
         [Fact]
         public void Example529()
         {
-            Assert.Equal(@"<p><img src=""url"" alt=""foo"" /></p>
-", GetHtml(@"![foo](<url>)
-"));
+            Assert.Equal(@"<p><img src=""url"" alt=""foo"" /></p>", GetHtml(@"![foo](<url>)"));
         }
 
         #endregion
@@ -115,9 +97,7 @@ namespace CommonPlex.CommonMark.Tests
         [Fact]
         public void Example530()
         {
-            Assert.Equal(@"<p><img src=""/url"" alt="""" /></p>
-", GetHtml(@"![](/url)
-"));
+            Assert.Equal(@"<p><img src=""/url"" alt="""" /></p>", GetHtml(@"![](/url)"));
         }
 
         #endregion
@@ -126,11 +106,9 @@ namespace CommonPlex.CommonMark.Tests
         [Fact]
         public void Example531()
         {
-            Assert.Equal(@"<p><img src=""/url"" alt=""foo"" /></p>
-", GetHtml(@"![foo] [bar]
+            Assert.Equal(@"<p><img src=""/url"" alt=""foo"" /></p>", GetHtml(@"![foo] [bar]
 
-[bar]: /url
-"));
+[bar]: /url"));
         }
 
         #endregion
@@ -139,11 +117,9 @@ namespace CommonPlex.CommonMark.Tests
         [Fact]
         public void Example532()
         {
-            Assert.Equal(@"<p><img src=""/url"" alt=""foo"" /></p>
-", GetHtml(@"![foo] [bar]
+            Assert.Equal(@"<p><img src=""/url"" alt=""foo"" /></p>", GetHtml(@"![foo] [bar]
 
-[BAR]: /url
-"));
+[BAR]: /url"));
         }
 
         #endregion
@@ -152,11 +128,9 @@ namespace CommonPlex.CommonMark.Tests
         [Fact]
         public void Example533()
         {
-            Assert.Equal(@"<p><img src=""/url"" alt=""foo"" title=""title"" /></p>
-", GetHtml(@"![foo][]
+            Assert.Equal(@"<p><img src=""/url"" alt=""foo"" title=""title"" /></p>", GetHtml(@"![foo][]
 
-[foo]: /url ""title""
-"));
+[foo]: /url ""title"""));
         }
 
         #endregion
@@ -165,11 +139,9 @@ namespace CommonPlex.CommonMark.Tests
         [Fact]
         public void Example534()
         {
-            Assert.Equal(@"<p><img src=""/url"" alt=""foo bar"" title=""title"" /></p>
-", GetHtml(@"![*foo* bar][]
+            Assert.Equal(@"<p><img src=""/url"" alt=""foo bar"" title=""title"" /></p>", GetHtml(@"![*foo* bar][]
 
-[*foo* bar]: /url ""title""
-"));
+[*foo* bar]: /url ""title"""));
         }
 
         #endregion
@@ -178,11 +150,9 @@ namespace CommonPlex.CommonMark.Tests
         [Fact]
         public void Example535()
         {
-            Assert.Equal(@"<p><img src=""/url"" alt=""Foo"" title=""title"" /></p>
-", GetHtml(@"![Foo][]
+            Assert.Equal(@"<p><img src=""/url"" alt=""Foo"" title=""title"" /></p>", GetHtml(@"![Foo][]
 
-[foo]: /url ""title""
-"));
+[foo]: /url ""title"""));
         }
 
         #endregion
@@ -191,12 +161,10 @@ namespace CommonPlex.CommonMark.Tests
         [Fact]
         public void Example536()
         {
-            Assert.Equal(@"<p><img src=""/url"" alt=""foo"" title=""title"" /></p>
-", GetHtml(@"![foo] 
+            Assert.Equal(@"<p><img src=""/url"" alt=""foo"" title=""title"" /></p>", GetHtml(@"![foo] 
 []
 
-[foo]: /url ""title""
-"));
+[foo]: /url ""title"""));
         }
 
         #endregion
@@ -205,11 +173,9 @@ namespace CommonPlex.CommonMark.Tests
         [Fact]
         public void Example537()
         {
-            Assert.Equal(@"<p><img src=""/url"" alt=""foo"" title=""title"" /></p>
-", GetHtml(@"![foo]
+            Assert.Equal(@"<p><img src=""/url"" alt=""foo"" title=""title"" /></p>", GetHtml(@"![foo]
 
-[foo]: /url ""title""
-"));
+[foo]: /url ""title"""));
         }
 
         #endregion
@@ -218,11 +184,9 @@ namespace CommonPlex.CommonMark.Tests
         [Fact]
         public void Example538()
         {
-            Assert.Equal(@"<p><img src=""/url"" alt=""foo bar"" title=""title"" /></p>
-", GetHtml(@"![*foo* bar]
+            Assert.Equal(@"<p><img src=""/url"" alt=""foo bar"" title=""title"" /></p>", GetHtml(@"![*foo* bar]
 
-[*foo* bar]: /url ""title""
-"));
+[*foo* bar]: /url ""title"""));
         }
 
         #endregion
@@ -232,11 +196,9 @@ namespace CommonPlex.CommonMark.Tests
         public void Example539()
         {
             Assert.Equal(@"<p>![[foo]]</p>
-<p>[[foo]]: /url &quot;title&quot;</p>
-", GetHtml(@"![[foo]]
+<p>[[foo]]: /url &quot;title&quot;</p>", GetHtml(@"![[foo]]
 
-[[foo]]: /url ""title""
-"));
+[[foo]]: /url ""title"""));
         }
 
         #endregion
@@ -245,11 +207,9 @@ namespace CommonPlex.CommonMark.Tests
         [Fact]
         public void Example540()
         {
-            Assert.Equal(@"<p><img src=""/url"" alt=""Foo"" title=""title"" /></p>
-", GetHtml(@"![Foo]
+            Assert.Equal(@"<p><img src=""/url"" alt=""Foo"" title=""title"" /></p>", GetHtml(@"![Foo]
 
-[foo]: /url ""title""
-"));
+[foo]: /url ""title"""));
         }
 
         #endregion
@@ -258,11 +218,9 @@ namespace CommonPlex.CommonMark.Tests
         [Fact]
         public void Example541()
         {
-            Assert.Equal(@"<p>![foo]</p>
-", GetHtml(@"\!\[foo]
+            Assert.Equal(@"<p>![foo]</p>", GetHtml(@"\!\[foo]
 
-[foo]: /url ""title""
-"));
+[foo]: /url ""title"""));
         }
 
         #endregion
@@ -271,11 +229,9 @@ namespace CommonPlex.CommonMark.Tests
         [Fact]
         public void Example542()
         {
-            Assert.Equal(@"<p>!<a href=""/url"" title=""title"">foo</a></p>
-", GetHtml(@"\![foo]
+            Assert.Equal(@"<p>!<a href=""/url"" title=""title"">foo</a></p>", GetHtml(@"\![foo]
 
-[foo]: /url ""title""
-"));
+[foo]: /url ""title"""));
         }
 
         #endregion

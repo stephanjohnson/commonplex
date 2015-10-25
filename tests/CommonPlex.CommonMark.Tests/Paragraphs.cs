@@ -11,11 +11,9 @@ namespace CommonPlex.CommonMark.Tests
         public void Example169()
         {
             Assert.Equal(@"<p>aaa</p>
-<p>bbb</p>
-", GetHtml(@"aaa
+<p>bbb</p>", GetHtml(@"aaa
 
-bbb
-"));
+bbb"));
         }
 
         #endregion
@@ -27,13 +25,11 @@ bbb
             Assert.Equal(@"<p>aaa
 bbb</p>
 <p>ccc
-ddd</p>
-", GetHtml(@"aaa
+ddd</p>", GetHtml(@"aaa
 bbb
 
 ccc
-ddd
-"));
+ddd"));
         }
 
         #endregion
@@ -43,12 +39,10 @@ ddd
         public void Example171()
         {
             Assert.Equal(@"<p>aaa</p>
-<p>bbb</p>
-", GetHtml(@"aaa
+<p>bbb</p>", GetHtml(@"aaa
 
 
-bbb
-"));
+bbb"));
         }
 
         #endregion
@@ -58,10 +52,8 @@ bbb
         public void Example172()
         {
             Assert.Equal(@"<p>aaa
-bbb</p>
-", GetHtml(@"  aaa
- bbb
-"));
+bbb</p>", GetHtml(@"  aaa
+ bbb"));
         }
 
         #endregion
@@ -72,11 +64,9 @@ bbb</p>
         {
             Assert.Equal(@"<p>aaa
 bbb
-ccc</p>
-", GetHtml(@"aaa
+ccc</p>", GetHtml(@"aaa
              bbb
-                                       ccc
-"));
+                                       ccc"));
         }
 
         #endregion
@@ -86,10 +76,8 @@ ccc</p>
         public void Example174()
         {
             Assert.Equal(@"<p>aaa
-bbb</p>
-", GetHtml(@"   aaa
-bbb
-"));
+bbb</p>", GetHtml(@"   aaa
+bbb"));
         }
 
         #endregion
@@ -100,10 +88,8 @@ bbb
         {
             Assert.Equal(@"<pre><code>aaa
 </code></pre>
-<p>bbb</p>
-", GetHtml(@"    aaa
-bbb
-"));
+<p>bbb</p>", GetHtml(@"    aaa
+bbb"));
         }
 
         #endregion
@@ -113,10 +99,8 @@ bbb
         public void Example176()
         {
             Assert.Equal(@"<p>aaa<br />
-bbb</p>
-", GetHtml(@"aaa     
-bbb     
-"));
+bbb</p>", GetHtml(@"aaa     
+bbb     "));
         }
 
         #endregion

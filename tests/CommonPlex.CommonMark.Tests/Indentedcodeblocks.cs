@@ -12,10 +12,8 @@ namespace CommonPlex.CommonMark.Tests
         {
             Assert.Equal(@"<pre><code>a simple
   indented code block
-</code></pre>
-", GetHtml(@"    a simple
-      indented code block
-"));
+</code></pre>", GetHtml(@"    a simple
+      indented code block"));
         }
 
         #endregion
@@ -29,11 +27,9 @@ namespace CommonPlex.CommonMark.Tests
 <p>foo</p>
 <p>bar</p>
 </li>
-</ul>
-", GetHtml(@"  - foo
+</ul>", GetHtml(@"  - foo
 
-    bar
-"));
+    bar"));
         }
 
         #endregion
@@ -49,11 +45,9 @@ namespace CommonPlex.CommonMark.Tests
 <li>bar</li>
 </ul>
 </li>
-</ol>
-", GetHtml(@"1.  foo
+</ol>", GetHtml(@"1.  foo
 
-    - bar
-"));
+    - bar"));
         }
 
         #endregion
@@ -66,12 +60,10 @@ namespace CommonPlex.CommonMark.Tests
 *hi*
 
 - one
-</code></pre>
-", GetHtml(@"    <a/>
+</code></pre>", GetHtml(@"    <a/>
     *hi*
 
-    - one
-"));
+    - one"));
         }
 
         #endregion
@@ -87,15 +79,13 @@ chunk2
 
 
 chunk3
-</code></pre>
-", GetHtml(@"    chunk1
+</code></pre>", GetHtml(@"    chunk1
 
     chunk2
   
  
  
-    chunk3
-"));
+    chunk3"));
         }
 
         #endregion
@@ -107,11 +97,9 @@ chunk3
             Assert.Equal(@"<pre><code>chunk1
   
   chunk2
-</code></pre>
-", GetHtml(@"    chunk1
+</code></pre>", GetHtml(@"    chunk1
       
-      chunk2
-"));
+      chunk2"));
         }
 
         #endregion
@@ -121,10 +109,8 @@ chunk3
         public void Example071()
         {
             Assert.Equal(@"<p>Foo
-bar</p>
-", GetHtml(@"Foo
+bar</p>", GetHtml(@"Foo
     bar
-
 "));
         }
 
@@ -136,10 +122,8 @@ bar</p>
         {
             Assert.Equal(@"<pre><code>foo
 </code></pre>
-<p>bar</p>
-", GetHtml(@"    foo
-bar
-"));
+<p>bar</p>", GetHtml(@"    foo
+bar"));
         }
 
         #endregion
@@ -154,14 +138,12 @@ bar
 <h2>Header</h2>
 <pre><code>foo
 </code></pre>
-<hr />
-", GetHtml(@"# Header
+<hr />", GetHtml(@"# Header
     foo
 Header
 ------
     foo
-----
-"));
+----"));
         }
 
         #endregion
@@ -172,10 +154,8 @@ Header
         {
             Assert.Equal(@"<pre><code>    foo
 bar
-</code></pre>
-", GetHtml(@"        foo
-    bar
-"));
+</code></pre>", GetHtml(@"        foo
+    bar"));
         }
 
         #endregion
@@ -185,12 +165,10 @@ bar
         public void Example075()
         {
             Assert.Equal(@"<pre><code>foo
-</code></pre>
-", GetHtml(@"
+</code></pre>", GetHtml(@"
     
     foo
     
-
 "));
         }
 
@@ -201,9 +179,7 @@ bar
         public void Example076()
         {
             Assert.Equal(@"<pre><code>foo  
-</code></pre>
-", GetHtml(@"    foo  
-"));
+</code></pre>", GetHtml(@"    foo  "));
         }
 
         #endregion

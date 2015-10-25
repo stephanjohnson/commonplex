@@ -11,10 +11,8 @@ namespace CommonPlex.CommonMark.Tests
         public void Example595()
         {
             Assert.Equal(@"<p>foo
-baz</p>
-", GetHtml(@"foo
-baz
-"));
+baz</p>", GetHtml(@"foo
+baz"));
         }
 
         #endregion
@@ -24,10 +22,8 @@ baz
         public void Example596()
         {
             Assert.Equal(@"<p>foo
-baz</p>
-", GetHtml(@"foo 
- baz
-"));
+baz</p>", GetHtml(@"foo 
+ baz"));
         }
 
         #endregion

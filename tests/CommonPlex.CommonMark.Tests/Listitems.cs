@@ -16,14 +16,12 @@ with two lines.</p>
 </code></pre>
 <blockquote>
 <p>A block quote.</p>
-</blockquote>
-", GetHtml(@"A paragraph
+</blockquote>", GetHtml(@"A paragraph
 with two lines.
 
     indented code
 
-> A block quote.
-"));
+> A block quote."));
         }
 
         #endregion
@@ -42,14 +40,12 @@ with two lines.</p>
 <p>A block quote.</p>
 </blockquote>
 </li>
-</ol>
-", GetHtml(@"1.  A paragraph
+</ol>", GetHtml(@"1.  A paragraph
     with two lines.
 
         indented code
 
-    > A block quote.
-"));
+    > A block quote."));
         }
 
         #endregion
@@ -61,11 +57,9 @@ with two lines.</p>
             Assert.Equal(@"<ul>
 <li>one</li>
 </ul>
-<p>two</p>
-", GetHtml(@"- one
+<p>two</p>", GetHtml(@"- one
 
- two
-"));
+ two"));
         }
 
         #endregion
@@ -79,11 +73,9 @@ with two lines.</p>
 <p>one</p>
 <p>two</p>
 </li>
-</ul>
-", GetHtml(@"- one
+</ul>", GetHtml(@"- one
 
-  two
-"));
+  two"));
         }
 
         #endregion
@@ -96,11 +88,9 @@ with two lines.</p>
 <li>one</li>
 </ul>
 <pre><code> two
-</code></pre>
-", GetHtml(@" -    one
+</code></pre>", GetHtml(@" -    one
 
-     two
-"));
+     two"));
         }
 
         #endregion
@@ -114,11 +104,9 @@ with two lines.</p>
 <p>one</p>
 <p>two</p>
 </li>
-</ul>
-", GetHtml(@" -    one
+</ul>", GetHtml(@" -    one
 
-      two
-"));
+      two"));
         }
 
         #endregion
@@ -136,11 +124,9 @@ with two lines.</p>
 </li>
 </ol>
 </blockquote>
-</blockquote>
-", GetHtml(@"   > > 1.  one
+</blockquote>", GetHtml(@"   > > 1.  one
 >>
->>     two
-"));
+>>     two"));
         }
 
         #endregion
@@ -156,11 +142,9 @@ with two lines.</p>
 </ul>
 <p>two</p>
 </blockquote>
-</blockquote>
-", GetHtml(@">>- one
+</blockquote>", GetHtml(@">>- one
 >>
-  >  > two
-"));
+  >  > two"));
         }
 
         #endregion
@@ -170,11 +154,9 @@ with two lines.</p>
         public void Example211()
         {
             Assert.Equal(@"<p>-one</p>
-<p>2.two</p>
-", GetHtml(@"-one
+<p>2.two</p>", GetHtml(@"-one
 
-2.two
-"));
+2.two"));
         }
 
         #endregion
@@ -213,8 +195,7 @@ bar
 </li>
 </ul>
 </li>
-</ul>
-", GetHtml(@"- foo
+</ul>", GetHtml(@"- foo
 
   bar
 
@@ -237,8 +218,7 @@ bar
 
 
     bar
-    ```
-"));
+    ```"));
         }
 
         #endregion
@@ -257,8 +237,7 @@ bar
 <p>bam</p>
 </blockquote>
 </li>
-</ol>
-", GetHtml(@"1.  foo
+</ol>", GetHtml(@"1.  foo
 
     ```
     bar
@@ -266,8 +245,7 @@ bar
 
     baz
 
-    > bam
-"));
+    > bam"));
         }
 
         #endregion
@@ -278,9 +256,7 @@ bar
         {
             Assert.Equal(@"<ol start=""123456789"">
 <li>ok</li>
-</ol>
-", GetHtml(@"123456789. ok
-"));
+</ol>", GetHtml(@"123456789. ok"));
         }
 
         #endregion
@@ -289,9 +265,7 @@ bar
         [Fact]
         public void Example215()
         {
-            Assert.Equal(@"<p>1234567890. not ok</p>
-", GetHtml(@"1234567890. not ok
-"));
+            Assert.Equal(@"<p>1234567890. not ok</p>", GetHtml(@"1234567890. not ok"));
         }
 
         #endregion
@@ -302,9 +276,7 @@ bar
         {
             Assert.Equal(@"<ol start=""0"">
 <li>ok</li>
-</ol>
-", GetHtml(@"0. ok
-"));
+</ol>", GetHtml(@"0. ok"));
         }
 
         #endregion
@@ -315,9 +287,7 @@ bar
         {
             Assert.Equal(@"<ol start=""3"">
 <li>ok</li>
-</ol>
-", GetHtml(@"003. ok
-"));
+</ol>", GetHtml(@"003. ok"));
         }
 
         #endregion
@@ -326,9 +296,7 @@ bar
         [Fact]
         public void Example218()
         {
-            Assert.Equal(@"<p>-1. not ok</p>
-", GetHtml(@"-1. not ok
-"));
+            Assert.Equal(@"<p>-1. not ok</p>", GetHtml(@"-1. not ok"));
         }
 
         #endregion
@@ -343,11 +311,9 @@ bar
 <pre><code>bar
 </code></pre>
 </li>
-</ul>
-", GetHtml(@"- foo
+</ul>", GetHtml(@"- foo
 
-      bar
-"));
+      bar"));
         }
 
         #endregion
@@ -362,11 +328,9 @@ bar
 <pre><code>bar
 </code></pre>
 </li>
-</ol>
-", GetHtml(@"  10.  foo
+</ol>", GetHtml(@"  10.  foo
 
-           bar
-"));
+           bar"));
         }
 
         #endregion
@@ -379,13 +343,11 @@ bar
 </code></pre>
 <p>paragraph</p>
 <pre><code>more code
-</code></pre>
-", GetHtml(@"    indented code
+</code></pre>", GetHtml(@"    indented code
 
 paragraph
 
-    more code
-"));
+    more code"));
         }
 
         #endregion
@@ -402,13 +364,11 @@ paragraph
 <pre><code>more code
 </code></pre>
 </li>
-</ol>
-", GetHtml(@"1.     indented code
+</ol>", GetHtml(@"1.     indented code
 
    paragraph
 
-       more code
-"));
+       more code"));
         }
 
         #endregion
@@ -425,13 +385,11 @@ paragraph
 <pre><code>more code
 </code></pre>
 </li>
-</ol>
-", GetHtml(@"1.      indented code
+</ol>", GetHtml(@"1.      indented code
 
    paragraph
 
-       more code
-"));
+       more code"));
         }
 
         #endregion
@@ -441,11 +399,9 @@ paragraph
         public void Example224()
         {
             Assert.Equal(@"<p>foo</p>
-<p>bar</p>
-", GetHtml(@"   foo
+<p>bar</p>", GetHtml(@"   foo
 
-bar
-"));
+bar"));
         }
 
         #endregion
@@ -457,11 +413,9 @@ bar
             Assert.Equal(@"<ul>
 <li>foo</li>
 </ul>
-<p>bar</p>
-", GetHtml(@"-    foo
+<p>bar</p>", GetHtml(@"-    foo
 
-  bar
-"));
+  bar"));
         }
 
         #endregion
@@ -475,11 +429,9 @@ bar
 <p>foo</p>
 <p>bar</p>
 </li>
-</ul>
-", GetHtml(@"-  foo
+</ul>", GetHtml(@"-  foo
 
-   bar
-"));
+   bar"));
         }
 
         #endregion
@@ -498,16 +450,14 @@ bar
 <pre><code>baz
 </code></pre>
 </li>
-</ul>
-", GetHtml(@"-
+</ul>", GetHtml(@"-
   foo
 -
   ```
   bar
   ```
 -
-      baz
-"));
+      baz"));
         }
 
         #endregion
@@ -519,11 +469,9 @@ bar
             Assert.Equal(@"<ul>
 <li></li>
 </ul>
-<p>foo</p>
-", GetHtml(@"-
+<p>foo</p>", GetHtml(@"-
 
-  foo
-"));
+  foo"));
         }
 
         #endregion
@@ -536,11 +484,9 @@ bar
 <li>foo</li>
 <li></li>
 <li>bar</li>
-</ul>
-", GetHtml(@"- foo
+</ul>", GetHtml(@"- foo
 -
-- bar
-"));
+- bar"));
         }
 
         #endregion
@@ -553,11 +499,9 @@ bar
 <li>foo</li>
 <li></li>
 <li>bar</li>
-</ul>
-", GetHtml(@"- foo
+</ul>", GetHtml(@"- foo
 -   
-- bar
-"));
+- bar"));
         }
 
         #endregion
@@ -570,11 +514,9 @@ bar
 <li>foo</li>
 <li></li>
 <li>bar</li>
-</ol>
-", GetHtml(@"1. foo
+</ol>", GetHtml(@"1. foo
 2.
-3. bar
-"));
+3. bar"));
         }
 
         #endregion
@@ -585,9 +527,7 @@ bar
         {
             Assert.Equal(@"<ul>
 <li></li>
-</ul>
-", GetHtml(@"*
-"));
+</ul>", GetHtml(@"*"));
         }
 
         #endregion
@@ -606,14 +546,12 @@ with two lines.</p>
 <p>A block quote.</p>
 </blockquote>
 </li>
-</ol>
-", GetHtml(@" 1.  A paragraph
+</ol>", GetHtml(@" 1.  A paragraph
      with two lines.
 
          indented code
 
-     > A block quote.
-"));
+     > A block quote."));
         }
 
         #endregion
@@ -632,14 +570,12 @@ with two lines.</p>
 <p>A block quote.</p>
 </blockquote>
 </li>
-</ol>
-", GetHtml(@"  1.  A paragraph
+</ol>", GetHtml(@"  1.  A paragraph
       with two lines.
 
           indented code
 
-      > A block quote.
-"));
+      > A block quote."));
         }
 
         #endregion
@@ -658,14 +594,12 @@ with two lines.</p>
 <p>A block quote.</p>
 </blockquote>
 </li>
-</ol>
-", GetHtml(@"   1.  A paragraph
+</ol>", GetHtml(@"   1.  A paragraph
        with two lines.
 
            indented code
 
-       > A block quote.
-"));
+       > A block quote."));
         }
 
         #endregion
@@ -680,14 +614,12 @@ with two lines.</p>
         indented code
 
     &gt; A block quote.
-</code></pre>
-", GetHtml(@"    1.  A paragraph
+</code></pre>", GetHtml(@"    1.  A paragraph
         with two lines.
 
             indented code
 
-        > A block quote.
-"));
+        > A block quote."));
         }
 
         #endregion
@@ -706,14 +638,12 @@ with two lines.</p>
 <p>A block quote.</p>
 </blockquote>
 </li>
-</ol>
-", GetHtml(@"  1.  A paragraph
+</ol>", GetHtml(@"  1.  A paragraph
 with two lines.
 
           indented code
 
-      > A block quote.
-"));
+      > A block quote."));
         }
 
         #endregion
@@ -725,10 +655,8 @@ with two lines.
             Assert.Equal(@"<ol>
 <li>A paragraph
 with two lines.</li>
-</ol>
-", GetHtml(@"  1.  A paragraph
-    with two lines.
-"));
+</ol>", GetHtml(@"  1.  A paragraph
+    with two lines."));
         }
 
         #endregion
@@ -746,10 +674,8 @@ continued here.</p>
 </blockquote>
 </li>
 </ol>
-</blockquote>
-", GetHtml(@"> 1. > Blockquote
-continued here.
-"));
+</blockquote>", GetHtml(@"> 1. > Blockquote
+continued here."));
         }
 
         #endregion
@@ -767,10 +693,8 @@ continued here.</p>
 </blockquote>
 </li>
 </ol>
-</blockquote>
-", GetHtml(@"> 1. > Blockquote
-> continued here.
-"));
+</blockquote>", GetHtml(@"> 1. > Blockquote
+> continued here."));
         }
 
         #endregion
@@ -789,11 +713,9 @@ continued here.</p>
 </li>
 </ul>
 </li>
-</ul>
-", GetHtml(@"- foo
+</ul>", GetHtml(@"- foo
   - bar
-    - baz
-"));
+    - baz"));
         }
 
         #endregion
@@ -806,11 +728,9 @@ continued here.</p>
 <li>foo</li>
 <li>bar</li>
 <li>baz</li>
-</ul>
-", GetHtml(@"- foo
+</ul>", GetHtml(@"- foo
  - bar
-  - baz
-"));
+  - baz"));
         }
 
         #endregion
@@ -825,10 +745,8 @@ continued here.</p>
 <li>bar</li>
 </ul>
 </li>
-</ol>
-", GetHtml(@"10) foo
-    - bar
-"));
+</ol>", GetHtml(@"10) foo
+    - bar"));
         }
 
         #endregion
@@ -842,10 +760,8 @@ continued here.</p>
 </ol>
 <ul>
 <li>bar</li>
-</ul>
-", GetHtml(@"10) foo
-   - bar
-"));
+</ul>", GetHtml(@"10) foo
+   - bar"));
         }
 
         #endregion
@@ -860,9 +776,7 @@ continued here.</p>
 <li>foo</li>
 </ul>
 </li>
-</ul>
-", GetHtml(@"- - foo
-"));
+</ul>", GetHtml(@"- - foo"));
         }
 
         #endregion
@@ -881,9 +795,7 @@ continued here.</p>
 </li>
 </ul>
 </li>
-</ol>
-", GetHtml(@"1. - 2. foo
-"));
+</ol>", GetHtml(@"1. - 2. foo"));
         }
 
         #endregion
@@ -899,12 +811,10 @@ continued here.</p>
 <li>
 <h2>Bar</h2>
 baz</li>
-</ul>
-", GetHtml(@"- # Foo
+</ul>", GetHtml(@"- # Foo
 - Bar
   ---
-  baz
-"));
+  baz"));
         }
 
         #endregion

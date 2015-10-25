@@ -35,7 +35,7 @@ namespace CommonPlex.CommonMark.Spec.Parser
             var exampleCounter = 0;
             var facts = new List<string>();
 
-            foreach (var line in specLines.Select(m => m.Replace("→", "\t")))
+            foreach (var line in specLines.Select(m => m.Replace("\"", "\"\"").Replace("→", "\t")))
             {
                 if (System.Text.RegularExpressions.Regex.IsMatch(line, @"^:*\s?(#{1,6}\s)[^\r\n]*(\r?\n|$)") && !sampleBlock && !htmlBlock)
                 {
@@ -102,7 +102,14 @@ namespace CommonPlex.CommonMark.Tests
 
         #endregion";
 
-                    var fact = string.Format(factFormat, exampleCounter, sample.Replace("\"", "\"\""), html.Replace("\"", "\"\""));
+                    if (sample.EndsWith(Environment.NewLine))
+                        sample = sample.Substring(0, sample.Length - 2);
+
+                    if (html.EndsWith(Environment.NewLine))
+                        html = html.Substring(0, html.Length - 2);
+
+                    var fact = string.Format(factFormat, exampleCounter, sample.Replace("\r\n", "\r"), html);
+
 
                     facts.Add(fact);
 

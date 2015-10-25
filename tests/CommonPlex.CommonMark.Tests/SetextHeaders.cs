@@ -11,13 +11,11 @@ namespace CommonPlex.CommonMark.Tests
         public void Example045()
         {
             Assert.Equal(@"<h1>Foo <em>bar</em></h1>
-<h2>Foo <em>bar</em></h2>
-", GetHtml(@"Foo *bar*
+<h2>Foo <em>bar</em></h2>", GetHtml(@"Foo *bar*
 =========
 
 Foo *bar*
----------
-"));
+---------"));
         }
 
         #endregion
@@ -27,13 +25,11 @@ Foo *bar*
         public void Example046()
         {
             Assert.Equal(@"<h2>Foo</h2>
-<h1>Foo</h1>
-", GetHtml(@"Foo
+<h1>Foo</h1>", GetHtml(@"Foo
 -------------------------
 
 Foo
-=
-"));
+="));
         }
 
         #endregion
@@ -44,16 +40,14 @@ Foo
         {
             Assert.Equal(@"<h2>Foo</h2>
 <h2>Foo</h2>
-<h1>Foo</h1>
-", GetHtml(@"   Foo
+<h1>Foo</h1>", GetHtml(@"   Foo
 ---
 
   Foo
 -----
 
   Foo
-  ===
-"));
+  ==="));
         }
 
         #endregion
@@ -67,13 +61,11 @@ Foo
 
 Foo
 </code></pre>
-<hr />
-", GetHtml(@"    Foo
+<hr />", GetHtml(@"    Foo
     ---
 
     Foo
----
-"));
+---"));
         }
 
         #endregion
@@ -82,10 +74,8 @@ Foo
         [Fact]
         public void Example049()
         {
-            Assert.Equal(@"<h2>Foo</h2>
-", GetHtml(@"Foo
-   ----      
-"));
+            Assert.Equal(@"<h2>Foo</h2>", GetHtml(@"Foo
+   ----      "));
         }
 
         #endregion
@@ -95,10 +85,8 @@ Foo
         public void Example050()
         {
             Assert.Equal(@"<p>Foo
----</p>
-", GetHtml(@"Foo
-    ---
-"));
+---</p>", GetHtml(@"Foo
+    ---"));
         }
 
         #endregion
@@ -110,13 +98,11 @@ Foo
             Assert.Equal(@"<p>Foo
 = =</p>
 <p>Foo</p>
-<hr />
-", GetHtml(@"Foo
+<hr />", GetHtml(@"Foo
 = =
 
 Foo
---- -
-"));
+--- -"));
         }
 
         #endregion
@@ -125,10 +111,8 @@ Foo
         [Fact]
         public void Example052()
         {
-            Assert.Equal(@"<h2>Foo</h2>
-", GetHtml(@"Foo  
------
-"));
+            Assert.Equal(@"<h2>Foo</h2>", GetHtml(@"Foo  
+-----"));
         }
 
         #endregion
@@ -137,10 +121,8 @@ Foo
         [Fact]
         public void Example053()
         {
-            Assert.Equal(@"<h2>Foo\</h2>
-", GetHtml(@"Foo\
-----
-"));
+            Assert.Equal(@"<h2>Foo\</h2>", GetHtml(@"Foo\
+----"));
         }
 
         #endregion
@@ -152,15 +134,13 @@ Foo
             Assert.Equal(@"<h2>`Foo</h2>
 <p>`</p>
 <h2>&lt;a title=&quot;a lot</h2>
-<p>of dashes&quot;/&gt;</p>
-", GetHtml(@"`Foo
+<p>of dashes&quot;/&gt;</p>", GetHtml(@"`Foo
 ----
 `
 
 <a title=""a lot
 ---
-of dashes""/>
-"));
+of dashes""/>"));
         }
 
         #endregion
@@ -172,10 +152,8 @@ of dashes""/>
             Assert.Equal(@"<blockquote>
 <p>Foo</p>
 </blockquote>
-<hr />
-", GetHtml(@"> Foo
----
-"));
+<hr />", GetHtml(@"> Foo
+---"));
         }
 
         #endregion
@@ -187,10 +165,8 @@ of dashes""/>
             Assert.Equal(@"<ul>
 <li>Foo</li>
 </ul>
-<hr />
-", GetHtml(@"- Foo
----
-"));
+<hr />", GetHtml(@"- Foo
+---"));
         }
 
         #endregion
@@ -204,15 +180,13 @@ Bar</p>
 <hr />
 <p>Foo
 Bar
-===</p>
-", GetHtml(@"Foo
+===</p>", GetHtml(@"Foo
 Bar
 ---
 
 Foo
 Bar
-===
-"));
+==="));
         }
 
         #endregion
@@ -224,14 +198,12 @@ Bar
             Assert.Equal(@"<hr />
 <h2>Foo</h2>
 <h2>Bar</h2>
-<p>Baz</p>
-", GetHtml(@"---
+<p>Baz</p>", GetHtml(@"---
 Foo
 ---
 Bar
 ---
-Baz
-"));
+Baz"));
         }
 
         #endregion
@@ -240,10 +212,8 @@ Baz
         [Fact]
         public void Example059()
         {
-            Assert.Equal(@"<p>====</p>
-", GetHtml(@"
-====
-"));
+            Assert.Equal(@"<p>====</p>", GetHtml(@"
+===="));
         }
 
         #endregion
@@ -253,10 +223,8 @@ Baz
         public void Example060()
         {
             Assert.Equal(@"<hr />
-<hr />
-", GetHtml(@"---
----
-"));
+<hr />", GetHtml(@"---
+---"));
         }
 
         #endregion
@@ -268,10 +236,8 @@ Baz
             Assert.Equal(@"<ul>
 <li>foo</li>
 </ul>
-<hr />
-", GetHtml(@"- foo
------
-"));
+<hr />", GetHtml(@"- foo
+-----"));
         }
 
         #endregion
@@ -282,10 +248,8 @@ Baz
         {
             Assert.Equal(@"<pre><code>foo
 </code></pre>
-<hr />
-", GetHtml(@"    foo
----
-"));
+<hr />", GetHtml(@"    foo
+---"));
         }
 
         #endregion
@@ -297,10 +261,8 @@ Baz
             Assert.Equal(@"<blockquote>
 <p>foo</p>
 </blockquote>
-<hr />
-", GetHtml(@"> foo
------
-"));
+<hr />", GetHtml(@"> foo
+-----"));
         }
 
         #endregion
@@ -309,10 +271,8 @@ Baz
         [Fact]
         public void Example064()
         {
-            Assert.Equal(@"<h2>&gt; foo</h2>
-", GetHtml(@"\> foo
-------
-"));
+            Assert.Equal(@"<h2>&gt; foo</h2>", GetHtml(@"\> foo
+------"));
         }
 
         #endregion
